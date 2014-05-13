@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B00E7DE1922B8ED0048742B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7DD1922B8ED0048742B /* Foundation.framework */; };
+		4B00E7E01922B8ED0048742B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7DF1922B8ED0048742B /* CoreGraphics.framework */; };
+		4B00E7E21922B8ED0048742B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7E11922B8ED0048742B /* UIKit.framework */; };
+		4B00E7E81922B8ED0048742B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B00E7E61922B8ED0048742B /* InfoPlist.strings */; };
+		4B00E7EA1922B8ED0048742B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00E7E91922B8ED0048742B /* main.m */; };
+		4B00E7EE1922B8ED0048742B /* SBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00E7ED1922B8ED0048742B /* SBAppDelegate.m */; };
+		4B00E7F01922B8ED0048742B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B00E7EF1922B8ED0048742B /* Images.xcassets */; };
+		4B00E7F71922B8ED0048742B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7F61922B8ED0048742B /* XCTest.framework */; };
+		4B00E7F81922B8ED0048742B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7DD1922B8ED0048742B /* Foundation.framework */; };
+		4B00E7F91922B8ED0048742B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7E11922B8ED0048742B /* UIKit.framework */; };
+		4B00E8011922B8ED0048742B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B00E7FF1922B8ED0048742B /* InfoPlist.strings */; };
+		4B00E8031922B8ED0048742B /* SBNumericPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00E8021922B8ED0048742B /* SBNumericPadTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B00E7FA1922B8ED0048742B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B00E7D21922B8ED0048742B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B00E7D91922B8ED0048742B;
+			remoteInfo = SBNumericPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4B00E7DA1922B8ED0048742B /* SBNumericPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBNumericPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B00E7DD1922B8ED0048742B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4B00E7DF1922B8ED0048742B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4B00E7E11922B8ED0048742B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4B00E7E51922B8ED0048742B /* SBNumericPad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBNumericPad-Info.plist"; sourceTree = "<group>"; };
+		4B00E7E71922B8ED0048742B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B00E7E91922B8ED0048742B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B00E7EB1922B8ED0048742B /* SBNumericPad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SBNumericPad-Prefix.pch"; sourceTree = "<group>"; };
+		4B00E7EC1922B8ED0048742B /* SBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAppDelegate.h; sourceTree = "<group>"; };
+		4B00E7ED1922B8ED0048742B /* SBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAppDelegate.m; sourceTree = "<group>"; };
+		4B00E7EF1922B8ED0048742B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4B00E7F51922B8ED0048742B /* SBNumericPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBNumericPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B00E7F61922B8ED0048742B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4B00E7FE1922B8ED0048742B /* SBNumericPadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBNumericPadTests-Info.plist"; sourceTree = "<group>"; };
+		4B00E8001922B8ED0048742B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B00E8021922B8ED0048742B /* SBNumericPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBNumericPadTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B00E7D71922B8ED0048742B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B00E7E01922B8ED0048742B /* CoreGraphics.framework in Frameworks */,
+				4B00E7E21922B8ED0048742B /* UIKit.framework in Frameworks */,
+				4B00E7DE1922B8ED0048742B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B00E7F21922B8ED0048742B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B00E7F71922B8ED0048742B /* XCTest.framework in Frameworks */,
+				4B00E7F91922B8ED0048742B /* UIKit.framework in Frameworks */,
+				4B00E7F81922B8ED0048742B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B00E7D11922B8ED0048742B = {
+			isa = PBXGroup;
+			children = (
+				4B00E7E31922B8ED0048742B /* SBNumericPad */,
+				4B00E7FC1922B8ED0048742B /* SBNumericPadTests */,
+				4B00E7DC1922B8ED0048742B /* Frameworks */,
+				4B00E7DB1922B8ED0048742B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B00E7DB1922B8ED0048742B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B00E7DA1922B8ED0048742B /* SBNumericPad.app */,
+				4B00E7F51922B8ED0048742B /* SBNumericPadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B00E7DC1922B8ED0048742B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B00E7DD1922B8ED0048742B /* Foundation.framework */,
+				4B00E7DF1922B8ED0048742B /* CoreGraphics.framework */,
+				4B00E7E11922B8ED0048742B /* UIKit.framework */,
+				4B00E7F61922B8ED0048742B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B00E7E31922B8ED0048742B /* SBNumericPad */ = {
+			isa = PBXGroup;
+			children = (
+				4B00E7EC1922B8ED0048742B /* SBAppDelegate.h */,
+				4B00E7ED1922B8ED0048742B /* SBAppDelegate.m */,
+				4B00E7EF1922B8ED0048742B /* Images.xcassets */,
+				4B00E7E41922B8ED0048742B /* Supporting Files */,
+			);
+			path = SBNumericPad;
+			sourceTree = "<group>";
+		};
+		4B00E7E41922B8ED0048742B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B00E7E51922B8ED0048742B /* SBNumericPad-Info.plist */,
+				4B00E7E61922B8ED0048742B /* InfoPlist.strings */,
+				4B00E7E91922B8ED0048742B /* main.m */,
+				4B00E7EB1922B8ED0048742B /* SBNumericPad-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B00E7FC1922B8ED0048742B /* SBNumericPadTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B00E8021922B8ED0048742B /* SBNumericPadTests.m */,
+				4B00E7FD1922B8ED0048742B /* Supporting Files */,
+			);
+			path = SBNumericPadTests;
+			sourceTree = "<group>";
+		};
+		4B00E7FD1922B8ED0048742B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B00E7FE1922B8ED0048742B /* SBNumericPadTests-Info.plist */,
+				4B00E7FF1922B8ED0048742B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B00E7D91922B8ED0048742B /* SBNumericPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B00E8061922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPad" */;
+			buildPhases = (
+				4B00E7D61922B8ED0048742B /* Sources */,
+				4B00E7D71922B8ED0048742B /* Frameworks */,
+				4B00E7D81922B8ED0048742B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SBNumericPad;
+			productName = SBNumericPad;
+			productReference = 4B00E7DA1922B8ED0048742B /* SBNumericPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B00E7F41922B8ED0048742B /* SBNumericPadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B00E8091922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPadTests" */;
+			buildPhases = (
+				4B00E7F11922B8ED0048742B /* Sources */,
+				4B00E7F21922B8ED0048742B /* Frameworks */,
+				4B00E7F31922B8ED0048742B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B00E7FB1922B8ED0048742B /* PBXTargetDependency */,
+			);
+			name = SBNumericPadTests;
+			productName = SBNumericPadTests;
+			productReference = 4B00E7F51922B8ED0048742B /* SBNumericPadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B00E7D21922B8ED0048742B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Bogdan Stasjuk";
+				TargetAttributes = {
+					4B00E7F41922B8ED0048742B = {
+						TestTargetID = 4B00E7D91922B8ED0048742B;
+					};
+				};
+			};
+			buildConfigurationList = 4B00E7D51922B8ED0048742B /* Build configuration list for PBXProject "SBNumericPad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4B00E7D11922B8ED0048742B;
+			productRefGroup = 4B00E7DB1922B8ED0048742B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B00E7D91922B8ED0048742B /* SBNumericPad */,
+				4B00E7F41922B8ED0048742B /* SBNumericPadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B00E7D81922B8ED0048742B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B00E7E81922B8ED0048742B /* InfoPlist.strings in Resources */,
+				4B00E7F01922B8ED0048742B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B00E7F31922B8ED0048742B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B00E8011922B8ED0048742B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B00E7D61922B8ED0048742B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B00E7EA1922B8ED0048742B /* main.m in Sources */,
+				4B00E7EE1922B8ED0048742B /* SBAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B00E7F11922B8ED0048742B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B00E8031922B8ED0048742B /* SBNumericPadTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B00E7FB1922B8ED0048742B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B00E7D91922B8ED0048742B /* SBNumericPad */;
+			targetProxy = 4B00E7FA1922B8ED0048742B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B00E7E61922B8ED0048742B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B00E7E71922B8ED0048742B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4B00E7FF1922B8ED0048742B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B00E8001922B8ED0048742B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B00E8041922B8ED0048742B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		4B00E8051922B8ED0048742B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B00E8071922B8EE0048742B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBNumericPad/SBNumericPad-Prefix.pch";
+				INFOPLIST_FILE = "SBNumericPad/SBNumericPad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4B00E8081922B8EE0048742B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBNumericPad/SBNumericPad-Prefix.pch";
+				INFOPLIST_FILE = "SBNumericPad/SBNumericPad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4B00E80A1922B8EE0048742B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SBNumericPad.app/SBNumericPad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBNumericPad/SBNumericPad-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SBNumericPadTests/SBNumericPadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4B00E80B1922B8EE0048742B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SBNumericPad.app/SBNumericPad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBNumericPad/SBNumericPad-Prefix.pch";
+				INFOPLIST_FILE = "SBNumericPadTests/SBNumericPadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B00E7D51922B8ED0048742B /* Build configuration list for PBXProject "SBNumericPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B00E8041922B8ED0048742B /* Debug */,
+				4B00E8051922B8ED0048742B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B00E8061922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B00E8071922B8EE0048742B /* Debug */,
+				4B00E8081922B8EE0048742B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4B00E8091922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B00E80A1922B8EE0048742B /* Debug */,
+				4B00E80B1922B8EE0048742B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B00E7D21922B8ED0048742B /* Project object */;
+}
