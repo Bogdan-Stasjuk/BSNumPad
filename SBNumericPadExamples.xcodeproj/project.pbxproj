@@ -10,15 +10,17 @@
 		4B00E7DE1922B8ED0048742B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7DD1922B8ED0048742B /* Foundation.framework */; };
 		4B00E7E01922B8ED0048742B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7DF1922B8ED0048742B /* CoreGraphics.framework */; };
 		4B00E7E21922B8ED0048742B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7E11922B8ED0048742B /* UIKit.framework */; };
-		4B00E7E81922B8ED0048742B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B00E7E61922B8ED0048742B /* InfoPlist.strings */; };
-		4B00E7EA1922B8ED0048742B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00E7E91922B8ED0048742B /* main.m */; };
-		4B00E7EE1922B8ED0048742B /* SBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00E7ED1922B8ED0048742B /* SBAppDelegate.m */; };
-		4B00E7F01922B8ED0048742B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B00E7EF1922B8ED0048742B /* Images.xcassets */; };
 		4B00E7F71922B8ED0048742B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7F61922B8ED0048742B /* XCTest.framework */; };
 		4B00E7F81922B8ED0048742B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7DD1922B8ED0048742B /* Foundation.framework */; };
 		4B00E7F91922B8ED0048742B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7E11922B8ED0048742B /* UIKit.framework */; };
 		4B00E8011922B8ED0048742B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B00E7FF1922B8ED0048742B /* InfoPlist.strings */; };
 		4B00E8031922B8ED0048742B /* SBNumericPadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00E8021922B8ED0048742B /* SBNumericPadTests.m */; };
+		4B00E8151922BB320048742B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B00E80D1922BB320048742B /* InfoPlist.strings */; };
+		4B00E8161922BB320048742B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B00E80F1922BB320048742B /* Images.xcassets */; };
+		4B00E8171922BB320048742B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00E8101922BB320048742B /* main.m */; };
+		4B00E8181922BB320048742B /* SBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00E8121922BB320048742B /* SBAppDelegate.m */; };
+		4B00E81D1922BBF40048742B /* SBTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00E81C1922BBF40048742B /* SBTestViewController.m */; };
+		4B00E8201922C9010048742B /* SBNumPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00E81F1922C9010048742B /* SBNumPadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,22 +34,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4B00E7DA1922B8ED0048742B /* SBNumericPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBNumericPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B00E7DA1922B8ED0048742B /* SBNumericPadExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBNumericPadExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B00E7DD1922B8ED0048742B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B00E7DF1922B8ED0048742B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4B00E7E11922B8ED0048742B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		4B00E7E51922B8ED0048742B /* SBNumericPad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBNumericPad-Info.plist"; sourceTree = "<group>"; };
-		4B00E7E71922B8ED0048742B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4B00E7E91922B8ED0048742B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4B00E7EB1922B8ED0048742B /* SBNumericPad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SBNumericPad-Prefix.pch"; sourceTree = "<group>"; };
-		4B00E7EC1922B8ED0048742B /* SBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAppDelegate.h; sourceTree = "<group>"; };
-		4B00E7ED1922B8ED0048742B /* SBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAppDelegate.m; sourceTree = "<group>"; };
-		4B00E7EF1922B8ED0048742B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4B00E7F51922B8ED0048742B /* SBNumericPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBNumericPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B00E7F51922B8ED0048742B /* SBNumericPadExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBNumericPadExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B00E7F61922B8ED0048742B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		4B00E7FE1922B8ED0048742B /* SBNumericPadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBNumericPadTests-Info.plist"; sourceTree = "<group>"; };
+		4B00E7FE1922B8ED0048742B /* SBNumericPadExamplesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBNumericPadExamplesTests-Info.plist"; sourceTree = "<group>"; };
 		4B00E8001922B8ED0048742B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B00E8021922B8ED0048742B /* SBNumericPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBNumericPadTests.m; sourceTree = "<group>"; };
+		4B00E80E1922BB320048742B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B00E80F1922BB320048742B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4B00E8101922BB320048742B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B00E8111922BB320048742B /* SBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAppDelegate.h; sourceTree = "<group>"; };
+		4B00E8121922BB320048742B /* SBAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAppDelegate.m; sourceTree = "<group>"; };
+		4B00E8131922BB320048742B /* SBNumericPadExamples-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SBNumericPadExamples-Info.plist"; sourceTree = "<group>"; };
+		4B00E8141922BB320048742B /* SBNumericPadExamples-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SBNumericPadExamples-Prefix.pch"; sourceTree = "<group>"; };
+		4B00E81B1922BBF40048742B /* SBTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTestViewController.h; sourceTree = "<group>"; };
+		4B00E81C1922BBF40048742B /* SBTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTestViewController.m; sourceTree = "<group>"; };
+		4B00E81E1922C9010048742B /* SBNumPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBNumPadViewController.h; sourceTree = "<group>"; };
+		4B00E81F1922C9010048742B /* SBNumPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBNumPadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +83,8 @@
 		4B00E7D11922B8ED0048742B = {
 			isa = PBXGroup;
 			children = (
-				4B00E7E31922B8ED0048742B /* SBNumericPad */,
+				4B00E81A1922BBCF0048742B /* SBNumericPad */,
+				4B00E80C1922BB320048742B /* SBNumericPadExamples */,
 				4B00E7FC1922B8ED0048742B /* SBNumericPadTests */,
 				4B00E7DC1922B8ED0048742B /* Frameworks */,
 				4B00E7DB1922B8ED0048742B /* Products */,
@@ -87,8 +94,8 @@
 		4B00E7DB1922B8ED0048742B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B00E7DA1922B8ED0048742B /* SBNumericPad.app */,
-				4B00E7F51922B8ED0048742B /* SBNumericPadTests.xctest */,
+				4B00E7DA1922B8ED0048742B /* SBNumericPadExamples.app */,
+				4B00E7F51922B8ED0048742B /* SBNumericPadExamplesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,28 +111,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4B00E7E31922B8ED0048742B /* SBNumericPad */ = {
-			isa = PBXGroup;
-			children = (
-				4B00E7EC1922B8ED0048742B /* SBAppDelegate.h */,
-				4B00E7ED1922B8ED0048742B /* SBAppDelegate.m */,
-				4B00E7EF1922B8ED0048742B /* Images.xcassets */,
-				4B00E7E41922B8ED0048742B /* Supporting Files */,
-			);
-			path = SBNumericPad;
-			sourceTree = "<group>";
-		};
-		4B00E7E41922B8ED0048742B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4B00E7E51922B8ED0048742B /* SBNumericPad-Info.plist */,
-				4B00E7E61922B8ED0048742B /* InfoPlist.strings */,
-				4B00E7E91922B8ED0048742B /* main.m */,
-				4B00E7EB1922B8ED0048742B /* SBNumericPad-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		4B00E7FC1922B8ED0048742B /* SBNumericPadTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,18 +123,43 @@
 		4B00E7FD1922B8ED0048742B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4B00E7FE1922B8ED0048742B /* SBNumericPadTests-Info.plist */,
+				4B00E7FE1922B8ED0048742B /* SBNumericPadExamplesTests-Info.plist */,
 				4B00E7FF1922B8ED0048742B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4B00E80C1922BB320048742B /* SBNumericPadExamples */ = {
+			isa = PBXGroup;
+			children = (
+				4B00E80D1922BB320048742B /* InfoPlist.strings */,
+				4B00E80F1922BB320048742B /* Images.xcassets */,
+				4B00E8101922BB320048742B /* main.m */,
+				4B00E8111922BB320048742B /* SBAppDelegate.h */,
+				4B00E8121922BB320048742B /* SBAppDelegate.m */,
+				4B00E8131922BB320048742B /* SBNumericPadExamples-Info.plist */,
+				4B00E8141922BB320048742B /* SBNumericPadExamples-Prefix.pch */,
+				4B00E81B1922BBF40048742B /* SBTestViewController.h */,
+				4B00E81C1922BBF40048742B /* SBTestViewController.m */,
+			);
+			path = SBNumericPadExamples;
+			sourceTree = "<group>";
+		};
+		4B00E81A1922BBCF0048742B /* SBNumericPad */ = {
+			isa = PBXGroup;
+			children = (
+				4B00E81E1922C9010048742B /* SBNumPadViewController.h */,
+				4B00E81F1922C9010048742B /* SBNumPadViewController.m */,
+			);
+			path = SBNumericPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B00E7D91922B8ED0048742B /* SBNumericPad */ = {
+		4B00E7D91922B8ED0048742B /* SBNumericPadExamples */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B00E8061922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPad" */;
+			buildConfigurationList = 4B00E8061922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPadExamples" */;
 			buildPhases = (
 				4B00E7D61922B8ED0048742B /* Sources */,
 				4B00E7D71922B8ED0048742B /* Frameworks */,
@@ -159,14 +169,14 @@
 			);
 			dependencies = (
 			);
-			name = SBNumericPad;
+			name = SBNumericPadExamples;
 			productName = SBNumericPad;
-			productReference = 4B00E7DA1922B8ED0048742B /* SBNumericPad.app */;
+			productReference = 4B00E7DA1922B8ED0048742B /* SBNumericPadExamples.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4B00E7F41922B8ED0048742B /* SBNumericPadTests */ = {
+		4B00E7F41922B8ED0048742B /* SBNumericPadExamplesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B00E8091922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPadTests" */;
+			buildConfigurationList = 4B00E8091922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPadExamplesTests" */;
 			buildPhases = (
 				4B00E7F11922B8ED0048742B /* Sources */,
 				4B00E7F21922B8ED0048742B /* Frameworks */,
@@ -177,9 +187,9 @@
 			dependencies = (
 				4B00E7FB1922B8ED0048742B /* PBXTargetDependency */,
 			);
-			name = SBNumericPadTests;
+			name = SBNumericPadExamplesTests;
 			productName = SBNumericPadTests;
-			productReference = 4B00E7F51922B8ED0048742B /* SBNumericPadTests.xctest */;
+			productReference = 4B00E7F51922B8ED0048742B /* SBNumericPadExamplesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -197,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4B00E7D51922B8ED0048742B /* Build configuration list for PBXProject "SBNumericPad" */;
+			buildConfigurationList = 4B00E7D51922B8ED0048742B /* Build configuration list for PBXProject "SBNumericPadExamples" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -209,8 +219,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B00E7D91922B8ED0048742B /* SBNumericPad */,
-				4B00E7F41922B8ED0048742B /* SBNumericPadTests */,
+				4B00E7D91922B8ED0048742B /* SBNumericPadExamples */,
+				4B00E7F41922B8ED0048742B /* SBNumericPadExamplesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,8 +230,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B00E7E81922B8ED0048742B /* InfoPlist.strings in Resources */,
-				4B00E7F01922B8ED0048742B /* Images.xcassets in Resources */,
+				4B00E8151922BB320048742B /* InfoPlist.strings in Resources */,
+				4B00E8161922BB320048742B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B00E7EA1922B8ED0048742B /* main.m in Sources */,
-				4B00E7EE1922B8ED0048742B /* SBAppDelegate.m in Sources */,
+				4B00E8201922C9010048742B /* SBNumPadViewController.m in Sources */,
+				4B00E8171922BB320048742B /* main.m in Sources */,
+				4B00E8181922BB320048742B /* SBAppDelegate.m in Sources */,
+				4B00E81D1922BBF40048742B /* SBTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,24 +270,24 @@
 /* Begin PBXTargetDependency section */
 		4B00E7FB1922B8ED0048742B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4B00E7D91922B8ED0048742B /* SBNumericPad */;
+			target = 4B00E7D91922B8ED0048742B /* SBNumericPadExamples */;
 			targetProxy = 4B00E7FA1922B8ED0048742B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4B00E7E61922B8ED0048742B /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4B00E7E71922B8ED0048742B /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		4B00E7FF1922B8ED0048742B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4B00E8001922B8ED0048742B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4B00E80D1922BB320048742B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B00E80E1922BB320048742B /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -361,9 +373,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SBNumericPad/SBNumericPad-Prefix.pch";
-				INFOPLIST_FILE = "SBNumericPad/SBNumericPad-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SBNumericPadExamples/SBNumericPadExamples-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SBNumericPadExamples/SBNumericPadExamples-Info.plist";
+				PRODUCT_NAME = SBNumericPadExamples;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -374,9 +386,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SBNumericPad/SBNumericPad-Prefix.pch";
-				INFOPLIST_FILE = "SBNumericPad/SBNumericPad-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SBNumericPadExamples/SBNumericPadExamples-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SBNumericPadExamples/SBNumericPadExamples-Info.plist";
+				PRODUCT_NAME = SBNumericPadExamples;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -396,8 +408,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SBNumericPadTests/SBNumericPadTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SBNumericPadTests/SBNumericPadExamplesTests-Info.plist";
+				PRODUCT_NAME = SBNumericPadExamplesTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -414,8 +426,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SBNumericPad/SBNumericPad-Prefix.pch";
-				INFOPLIST_FILE = "SBNumericPadTests/SBNumericPadTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SBNumericPadTests/SBNumericPadExamplesTests-Info.plist";
+				PRODUCT_NAME = SBNumericPadExamplesTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -424,7 +436,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B00E7D51922B8ED0048742B /* Build configuration list for PBXProject "SBNumericPad" */ = {
+		4B00E7D51922B8ED0048742B /* Build configuration list for PBXProject "SBNumericPadExamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B00E8041922B8ED0048742B /* Debug */,
@@ -433,7 +445,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B00E8061922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPad" */ = {
+		4B00E8061922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPadExamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B00E8071922B8EE0048742B /* Debug */,
@@ -441,7 +453,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		4B00E8091922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPadTests" */ = {
+		4B00E8091922B8EE0048742B /* Build configuration list for PBXNativeTarget "SBNumericPadExamplesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B00E80A1922B8EE0048742B /* Debug */,
