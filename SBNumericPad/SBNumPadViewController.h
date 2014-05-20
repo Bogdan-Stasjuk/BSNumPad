@@ -8,6 +8,9 @@
 
 @interface SBNumPadViewController : UIViewController
 
+@property(nonatomic, assign) NSUInteger digitCntBeforeDot;
+@property(nonatomic, assign) NSUInteger digitCntAfterDot;
+
 - (id)initWithTextField:(UITextField *)textField;
 
 #pragma mark - Unavailable methods

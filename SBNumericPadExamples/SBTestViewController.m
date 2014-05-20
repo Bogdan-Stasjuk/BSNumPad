@@ -8,13 +8,12 @@
 
 #import "SBTestViewController.h"
 
-#import "SBNumPadViewController.h"
+#import "SBNumPadPopoverConotroller.h"
 
 
-@interface SBTestViewController ()
+@interface SBTestViewController () <SBNumPadPopoverConotrollerDelegate>
 
-//@property(nonatomic, strong) UIPopoverController *popover;
-@property(nonatomic, strong) SBNumPadViewController *numPadViewController;
+@property(nonatomic, strong) SBNumPadPopoverConotroller *numPadPopoverConotroller;
 
 @end
 
@@ -57,8 +56,8 @@
     [super viewDidAppear:animated];
     
     UITextField *textField = [self setupTextField];
-    self.numPadViewController = [[SBNumPadViewController alloc] initWithTextField:textField];
-//    [self showPopoverFromView:textField];
+    self.numPadPopoverConotroller = [[SBNumPadPopoverConotroller alloc] initWithTextField:textField];
+    self.numPadPopoverConotroller.padPosition = SBNumPadPositionBottom;
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,11 +66,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark --SBNumPadPopoverConotrollerDelegate
+
+- (BOOL)isValidTextFieldText:(NSString *)text
+{
+    return YES;
+}
+
 #pragma mark --Other
 
 - (UITextField *)setupTextField
 {
-    CGRect textFieldFrame = CGRectMake(10.f, [[self class] screenHeight] / 2.f, [[self class] screenWidth] / 2.f, 25.f);
+    CGRect textFieldFrame = CGRectMake([[self class] screenWidth] / 2.f - 50.f, [[self class] screenHeight] / 2.f, 100.f, 25.f);
     UITextField *textField = [[UITextField alloc] initWithFrame:textFieldFrame];
     textField.inputView = [UIView new];
 
@@ -84,14 +90,5 @@
     
     return textField;
 }
-
-//- (void)showPopoverFromView:(UIView *)view
-//{
-//    UIViewController *contentController = [UIViewController new];
-//    self.popover = [[UIPopoverController alloc] initWithContentViewController:contentController];
-//
-//    CGRect popoverFrame = CGRectMake(0.f, 0.f, 100.f, 100.f);
-//    [self.popover presentPopoverFromRect:popoverFrame inView:view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
-//}
 
 @end
