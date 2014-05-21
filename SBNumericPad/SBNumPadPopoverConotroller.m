@@ -71,7 +71,7 @@
             break;
     }
     
-    CGRect popoverFrame = CGRectMake(padPosX, padPosY, 0.f, 0.f);
+    CGRect popoverFrame = CGRectMake(padPosX, padPosY, 1.f, 1.f);
     [self presentPopoverFromRect:popoverFrame inView:self.textField permittedArrowDirections:arrowDirection animated:YES];
 }
 
