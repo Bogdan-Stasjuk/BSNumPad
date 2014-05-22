@@ -22,6 +22,17 @@
 
 #pragma mark - Public methods
 
+#pragma mark -UIPopoverController
+
+- (void)dismissPopoverAnimated:(BOOL)animated
+{
+    [super dismissPopoverAnimated:animated];
+    
+    [self.textField resignFirstResponder];
+}
+
+#pragma mark -Other
+
 - (id)initWithTextField:(UITextField *)textField
 {
     SBNumPadViewController *numPadViewController = [[SBNumPadViewController alloc] initWithTextField:textField];
