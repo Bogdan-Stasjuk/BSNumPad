@@ -42,6 +42,7 @@ NSString * const dot = @".";
     self = [super init];
     if (self) {
         self.textField = textField;
+        self.textField.inputView = [UIView new];
         
         self.digitCntBeforeDot = 6;
         self.digitCntAfterDot = 3;

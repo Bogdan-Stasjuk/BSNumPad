@@ -79,7 +79,6 @@
 {
     CGRect textFieldFrame = CGRectMake([[self class] screenWidth] / 2.f - 50.f, [[self class] screenHeight] / 2.f, 100.f, 25.f);
     UITextField *textField = [[UITextField alloc] initWithFrame:textFieldFrame];
-    textField.inputView = [UIView new];
 
     textField.layer.cornerRadius=8.0f;
     textField.layer.masksToBounds=YES;
