@@ -56,12 +56,11 @@
 
 - (void)addSubviews
 {
-    UIImageView *keyboardBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KeyboardBackgroundTextured"]];
-    UIImageView *keyboardGridLines = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KeyboardNumericEntryViewGridLinesTextured"]];
-    //        UIImageView *keyboardShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KeyboardTopShadow"]];
-    
+    UIImageView *keyboardBackground = [[UIImageView alloc] initWithImage:[self imageForResource:@"KeyboardBackgroundTextured"]];
+    UIImageView *keyboardGridLines = [[UIImageView alloc] initWithImage:[self imageForResource:@"KeyboardNumericEntryViewGridLinesTextured"]];
     [self addSubview:keyboardBackground];
     [self addSubview:keyboardGridLines];
+    
     [self addSubview:[self addNumericKeyWithTitle:@"1" frame:CGRectMake(0, 1, KEYBOARD_NUMERIC_KEY_WIDTH - 3, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     [self addSubview:[self addNumericKeyWithTitle:@"2" frame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH - 2, 1, KEYBOARD_NUMERIC_KEY_WIDTH, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     [self addSubview:[self addNumericKeyWithTitle:@"3" frame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH * 2 - 1, 1, KEYBOARD_NUMERIC_KEY_WIDTH - 2, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
@@ -77,11 +76,10 @@
     [self addSubview:[self addNumericKeyWithTitle:@"." frame:CGRectMake(0, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH - 3, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     [self addSubview:[self addNumericKeyWithTitle:@"0" frame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH - 2, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     [self addSubview:[self addBackspaceKeyWithFrame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH * 2 - 1, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH - 3, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
-    
-    //        [self addSubview:keyboardShadow];
 }
 
-- (UIButton *)addNumericKeyWithTitle:(NSString *)title frame:(CGRect)frame {
+- (UIButton *)addNumericKeyWithTitle:(NSString *)title frame:(CGRect)frame
+{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = frame;
     [button setTitle:title forState:UIControlStateNormal];
@@ -93,8 +91,8 @@
     [button setTitleShadowColor:[UIColor darkGrayColor] forState:UIControlStateHighlighted];
     [button.titleLabel setShadowOffset:CGSizeMake(0, -0.5)];
     
-    UIImage *buttonImage = [UIImage imageNamed:@"KeyboardNumericEntryKeyTextured"];
-    UIImage *buttonPressedImage = [UIImage imageNamed:@"KeyboardNumericEntryKeyPressedTextured"];
+    UIImage *buttonImage = [self imageForResource:@"KeyboardNumericEntryKeyTextured"];
+    UIImage *buttonPressedImage = [self imageForResource:@"KeyboardNumericEntryKeyPressedTextured"];
     [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
     [button setBackgroundImage:buttonPressedImage forState:UIControlStateHighlighted];
     [button addTarget:self action:@selector(pressNumericKey:) forControlEvents:UIControlEventTouchUpInside];
@@ -102,12 +100,13 @@
     return button;
 }
 
-- (UIButton *)addBackspaceKeyWithFrame:(CGRect)frame {
+- (UIButton *)addBackspaceKeyWithFrame:(CGRect)frame
+{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = frame;
-    UIImage *buttonImage = [UIImage imageNamed:@"KeyboardNumericEntryKeyTextured"];
-    UIImage *buttonPressedImage = [UIImage imageNamed:@"KeyboardNumericEntryKeyPressedTextured"];
-    UIImage *image = [UIImage imageNamed:@"KeyboardNumericEntryKeyBackspaceGlyphTextured"];
+    UIImage *buttonImage = [self imageForResource:@"KeyboardNumericEntryKeyTextured"];
+    UIImage *buttonPressedImage = [self imageForResource:@"KeyboardNumericEntryKeyPressedTextured"];
+    UIImage *image = [self imageForResource:@"KeyboardNumericEntryKeyBackspaceGlyphTextured"];
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake((buttonImage.size.width - image.size.width) / 2, (buttonImage.size.height - image.size.height) / 2, image.size.width, image.size.height)];
     imgView.image = image;
     [button addSubview:imgView];
@@ -132,6 +131,20 @@
     {
         [self.delegate backspaceKeyDidPressed];
     }
+}
+
+- (UIImage *)imageForResource:(NSString *)imageRes
+{
+    UIImage *image = [UIImage imageNamed:imageRes];
+    if (image) {
+        return image;
+    }
+    
+    NSString *imageResPath = [@"Images.bundle/" stringByAppendingString:imageRes];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:imageResPath withExtension:@"png"];
+    NSData *imgData = [NSData dataWithContentsOfURL:url];
+
+    return [UIImage imageWithData:imgData scale:2.f];
 }
 
 @end
