@@ -28,7 +28,7 @@
 {
     [super dismissPopoverAnimated:animated];
     
-    [self.textField resignFirstResponder];
+    [self popoverDidDisappear];
 }
 
 #pragma mark -Other
@@ -102,7 +102,18 @@
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
+    [self popoverDidDisappear];
+}
+
+#pragma mark -Other
+
+- (void)popoverDidDisappear
+{
     [self.textField resignFirstResponder];
+    
+    if ([self.padDelegate respondsToSelector:@selector(popoverDidDisappear)]) {
+        [self.padDelegate popoverDidDisappear];
+    }
 }
 
 @end

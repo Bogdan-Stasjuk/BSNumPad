@@ -69,14 +69,19 @@
 
 #pragma mark --SBNumPadPopoverConotrollerDelegate
 
+- (void)popoverWillAppear
+{
+    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover will appear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+}
+
 - (BOOL)isValidTextFieldText:(NSString *)text
 {
     return YES;
 }
 
-- (void)popoverWillAppear
+- (void)popoverDidDisappear
 {
-    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover will appear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover did disappear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 #pragma mark --Other
