@@ -38,5 +38,6 @@ typedef NS_ENUM(NSUInteger, SBNumPadPosition)
 
 @optional
 - (BOOL)isValidTextFieldText:(NSString *)text;
+- (void)popoverWillAppear;
 
 @end

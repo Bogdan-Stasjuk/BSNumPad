@@ -57,6 +57,7 @@
     
     UITextField *textField = [self setupTextField];
     self.numPadPopoverConotroller = [[SBNumPadPopoverConotroller alloc] initWithTextField:textField];
+    self.numPadPopoverConotroller.padDelegate = self;
     self.numPadPopoverConotroller.padPosition = SBNumPadPositionBottom;
 }
 
@@ -71,6 +72,11 @@
 - (BOOL)isValidTextFieldText:(NSString *)text
 {
     return YES;
+}
+
+- (void)popoverWillAppear
+{
+    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover will appear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 #pragma mark --Other

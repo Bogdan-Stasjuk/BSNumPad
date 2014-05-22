@@ -55,6 +55,10 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    if ([self.padDelegate respondsToSelector:@selector(popoverWillAppear)]) {
+        [self.padDelegate popoverWillAppear];
+    }
+    
     NSInteger padPosX = 0.f;
     NSInteger padPosY = 0.f;
     UIPopoverArrowDirection arrowDirection = UIPopoverArrowDirectionAny;
