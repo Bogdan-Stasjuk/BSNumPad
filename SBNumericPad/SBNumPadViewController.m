@@ -22,6 +22,8 @@
 
 @implementation SBNumPadViewController
 
+static UIView *inputViewCap;
+
 NSString * const dot = @".";
 
 #pragma mark - Properties
@@ -42,7 +44,7 @@ NSString * const dot = @".";
     self = [super init];
     if (self) {
         self.textField = textField;
-        self.textField.inputView = [UIView new];
+        self.textField.inputView = [self inputViewCap];
         
         self.digitCntBeforeDot = 6;
         self.digitCntAfterDot = 3;
@@ -125,6 +127,17 @@ NSString * const dot = @".";
 - (void)btnPressed
 {
     self.textField.text = [self.textField.text stringByAppendingString:@"+"];
+}
+
+#pragma mark -Other
+
+- (UIView *)inputViewCap
+{
+    if (inputViewCap == nil) {
+        inputViewCap = [UIView new];
+        inputViewCap.backgroundColor = [UIColor clearColor];
+    }
+    return inputViewCap;
 }
 
 @end
