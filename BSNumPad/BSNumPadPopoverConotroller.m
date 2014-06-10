@@ -33,9 +33,10 @@
 
 #pragma mark -Other
 
-- (id)initWithTextField:(UITextField *)textField
+- (id)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat
 {
     BSNumPadViewController *numPadViewController = [[BSNumPadViewController alloc] initWithTextField:textField];
+    numPadViewController.textFieldFormat = textFieldFormat;
     self = [super initWithContentViewController:numPadViewController];
     if (self) {
         self.delegate = self;

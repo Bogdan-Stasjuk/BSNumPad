@@ -6,16 +6,10 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
+#import "BSNumPad.h"
+
+
 @protocol BSNumPadPopoverConotrollerDelegate;
-
-
-typedef NS_ENUM(NSUInteger, BSPopoverPosition)
-{
-    BSPopoverPositionLeft,
-    BSPopoverPositionTop,
-    BSPopoverPositionRight,
-    BSPopoverPositionBottom,
-};
 
 
 @interface BSNumPadPopoverConotroller : UIPopoverController
@@ -24,7 +18,7 @@ typedef NS_ENUM(NSUInteger, BSPopoverPosition)
 
 @property(nonatomic, assign) BSPopoverPosition padPosition;
 
-- (id)initWithTextField:(UITextField *)textField;
+- (id)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat;
 
 #pragma mark -Unavailable methods
 

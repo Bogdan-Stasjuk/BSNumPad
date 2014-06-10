@@ -6,10 +6,14 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
+#import "BSNumPad.h"
+
+
 @interface BSNumPadViewController : UIViewController
 
-@property(nonatomic, assign) NSUInteger digitCntBeforeDot;
-@property(nonatomic, assign) NSUInteger digitCntAfterDot;
+@property(nonatomic, assign) NSUInteger         digitCntBeforeDot;
+@property(nonatomic, assign) NSUInteger         digitCntAfterDot;
+@property(nonatomic, assign) BSTextFieldFormat  textFieldFormat;
 
 - (id)initWithTextField:(UITextField *)textField;
 

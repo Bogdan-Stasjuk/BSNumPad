@@ -25,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4339534419473CE600FC40C5 /* BSNumPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNumPad.h; sourceTree = "<group>"; };
 		43DC30661946F5DD006A3FD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43DC30671946F5DD006A3FD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43DC30681946F5DD006A3FD1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 				43DC309519470335006A3FD1 /* BSNumPadViewController.m */,
 				43DC309619470335006A3FD1 /* UIImage+Helpers.h */,
 				43DC309719470335006A3FD1 /* UIImage+Helpers.m */,
+				4339534419473CE600FC40C5 /* BSNumPad.h */,
 			);
 			path = BSNumPad;
 			sourceTree = "<group>";

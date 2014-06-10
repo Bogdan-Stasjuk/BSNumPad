@@ -56,7 +56,7 @@
     [super viewDidAppear:animated];
     
     UITextField *textField = [self setupTextField];
-    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField];
+    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatDate];
     self.numPadPopoverConotroller.padDelegate = self;
     self.numPadPopoverConotroller.padPosition = BSPopoverPositionBottom;
 }
@@ -71,7 +71,7 @@
 
 - (void)popoverWillAppear
 {
-    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover will appear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+//    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover will appear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 - (BOOL)isValidTextFieldText:(NSString *)text
@@ -81,21 +81,21 @@
 
 - (void)popoverDidDisappear
 {
-    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover did disappear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+//    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover did disappear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 #pragma mark --Other
 
 - (UITextField *)setupTextField
 {
-    CGRect textFieldFrame = CGRectMake([[self class] screenWidth] / 2.f - 50.f, [[self class] screenHeight] / 2.f, 100.f, 25.f);
-    UITextField *textField = [[UITextField alloc] initWithFrame:textFieldFrame];
-
-    textField.layer.cornerRadius=8.0f;
-    textField.layer.masksToBounds=YES;
-    textField.layer.borderColor=[[UIColor redColor]CGColor];
-    textField.layer.borderWidth= 1.0f;
-    
+    CGFloat textFieldWidth = 200.f;
+    CGFloat textFieldHeight = 30.f;
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake((self.view.frame.size.width - textFieldWidth) / 2,
+                                                                           (self.view.frame.size.height - textFieldHeight) / 2,
+                                                                           textFieldWidth,
+                                                                           textFieldHeight)];
+    textField.backgroundColor = [UIColor lightGrayColor];
+    textField.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:textField];
     
     return textField;
