@@ -13,7 +13,6 @@
 
 @interface BSNumPadViewController () <UITextFieldDelegate, SBNumPadViewDelegate>
 
-@property(nonatomic, strong) UIPopoverController    *popover;
 @property(nonatomic, weak)      UITextField         *textField;
 @property (nonatomic,assign) id<UITextInput>        textInputDelegate;
 
