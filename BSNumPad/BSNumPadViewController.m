@@ -121,13 +121,6 @@ NSString * const dot = @".";
     }
 }
 
-#pragma mark -Actions
-
-- (void)btnPressed
-{
-    self.textField.text = [self.textField.text stringByAppendingString:@"+"];
-}
-
 #pragma mark -Other
 
 - (UIView *)inputViewCap
