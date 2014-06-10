@@ -6,19 +6,19 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
-#import "SBTestViewController.h"
+#import "BSTestViewController.h"
 
-#import "SBNumPadPopoverConotroller.h"
+#import "BSNumPadPopoverConotroller.h"
 
 
-@interface SBTestViewController () <SBNumPadPopoverConotrollerDelegate>
+@interface BSTestViewController () <SBNumPadPopoverConotrollerDelegate>
 
-@property(nonatomic, strong) SBNumPadPopoverConotroller *numPadPopoverConotroller;
+@property(nonatomic, strong) BSNumPadPopoverConotroller *numPadPopoverConotroller;
 
 @end
 
 
-@implementation SBTestViewController
+@implementation BSTestViewController
 
 #pragma mark - Private methods
 
@@ -56,7 +56,7 @@
     [super viewDidAppear:animated];
     
     UITextField *textField = [self setupTextField];
-    self.numPadPopoverConotroller = [[SBNumPadPopoverConotroller alloc] initWithTextField:textField];
+    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField];
     self.numPadPopoverConotroller.padDelegate = self;
     self.numPadPopoverConotroller.padPosition = SBNumPadPositionBottom;
 }

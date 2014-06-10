@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, SBNumPadPosition)
 };
 
 
-@interface SBNumPadPopoverConotroller : UIPopoverController
+@interface BSNumPadPopoverConotroller : UIPopoverController
 
 @property(nonatomic, weak) id<SBNumPadPopoverConotrollerDelegate> padDelegate;
 

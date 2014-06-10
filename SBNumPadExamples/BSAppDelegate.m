@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
-#import "SBAppDelegate.h"
+#import "BSAppDelegate.h"
 
-#import "SBTestViewController.h"
+#import "BSTestViewController.h"
 
 
 @implementation SBAppDelegate
@@ -18,7 +18,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
-    self.window.rootViewController = [SBTestViewController new];
+    self.window.rootViewController = [BSTestViewController new];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

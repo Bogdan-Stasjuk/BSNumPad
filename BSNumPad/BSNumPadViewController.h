@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
-@interface SBNumPadViewController : UIViewController
+@interface BSNumPadViewController : UIViewController
 
 @property(nonatomic, assign) NSUInteger digitCntBeforeDot;
 @property(nonatomic, assign) NSUInteger digitCntAfterDot;

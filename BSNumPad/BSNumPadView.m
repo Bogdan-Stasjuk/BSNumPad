@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
-#import "SBNumPadView.h"
+#import "BSNumPadView.h"
+
+#import "UIImage+Helpers.h"
 
 
 #define KEYBOARD_NUMERIC_KEY_WIDTH 108
@@ -27,27 +29,26 @@
 #define FONT_SIZE_MEDIUM_HEIGHT 17.0f
 
 
-@interface SBNumPadView()
+@interface BSNumPadView()
 
 
 @end
 
 
-@implementation SBNumPadView
+@implementation BSNumPadView
 
 #pragma mark - Public methods
 
 #pragma mark -UIView
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)init
 {
-    self = [super initWithFrame:frame]; 
+    self = [super init];
     if (self) {
         self.autoresizesSubviews = YES;
         self.clipsToBounds = YES;
         [self addSubviews];
     }
-    
     return self;
 }
 
@@ -137,7 +138,7 @@
 {
     UIImage *image = [UIImage imageNamed:imageRes];
     if (image) {
-        return image;
+        return [image scale:0.5f];
     }
     
     NSString *imageResPath = [@"Images.bundle/" stringByAppendingString:imageRes];

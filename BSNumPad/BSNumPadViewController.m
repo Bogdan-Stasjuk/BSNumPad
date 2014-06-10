@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
-#import "SBNumPadViewController.h"
+#import "BSNumPadViewController.h"
 
-#import "SBNumPadView.h"
+#import "BSNumPadView.h"
 
 
-@interface SBNumPadViewController () <UITextFieldDelegate, SBNumPadViewDelegate>
+@interface BSNumPadViewController () <UITextFieldDelegate, SBNumPadViewDelegate>
 
 @property(nonatomic, strong) UIPopoverController    *popover;
 @property(nonatomic, weak)      UITextField         *textField;
@@ -20,7 +20,7 @@
 @end
 
 
-@implementation SBNumPadViewController
+@implementation BSNumPadViewController
 
 static UIView *inputViewCap;
 
@@ -48,9 +48,9 @@ NSString * const dot = @".";
         
         self.digitCntBeforeDot = 6;
         self.digitCntAfterDot = 3;
-        
-        CGRect keyboardFrame = CGRectMake(0.f, 0.f, 100.f, 100.f);
-        SBNumPadView *keyboard = [[SBNumPadView alloc] initWithFrame:keyboardFrame];
+
+        self.preferredContentSize = CGSizeMake(320.f, 215.f);
+        BSNumPadView *keyboard = [BSNumPadView new];
         keyboard.delegate = self;
         self.view = keyboard;
     }

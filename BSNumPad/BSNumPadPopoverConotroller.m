@@ -6,19 +6,19 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
-#import "SBNumPadPopoverConotroller.h"
+#import "BSNumPadPopoverConotroller.h"
 
-#import "SBNumPadViewController.h"
+#import "BSNumPadViewController.h"
 
 
-@interface SBNumPadPopoverConotroller () <UITextFieldDelegate, UIPopoverControllerDelegate>
+@interface BSNumPadPopoverConotroller () <UITextFieldDelegate, UIPopoverControllerDelegate>
 
 @property(nonatomic, strong) UITextField *textField;
 
 @end
 
 
-@implementation SBNumPadPopoverConotroller
+@implementation BSNumPadPopoverConotroller
 
 #pragma mark - Public methods
 
@@ -35,15 +35,13 @@
 
 - (id)initWithTextField:(UITextField *)textField
 {
-    SBNumPadViewController *numPadViewController = [[SBNumPadViewController alloc] initWithTextField:textField];
+    BSNumPadViewController *numPadViewController = [[BSNumPadViewController alloc] initWithTextField:textField];
     self = [super initWithContentViewController:numPadViewController];
     if (self) {
         self.delegate = self;
         
         self.textField = textField;
         self.textField.delegate = self;
-
-        self.popoverContentSize = CGSizeMake(320.f, 215.f);
     }
     return self;
 }

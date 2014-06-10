@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43DC30761946F5DD006A3FD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DC30681946F5DD006A3FD1 /* main.m */; };
+		43DC307B1946F5DD006A3FD1 /* BSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DC306F1946F5DD006A3FD1 /* BSAppDelegate.m */; };
+		43DC307D1946F5DD006A3FD1 /* BSTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DC30731946F5DD006A3FD1 /* BSTestViewController.m */; };
+		43DC309819470335006A3FD1 /* KeyboardBackgroundTextured.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DC308B19470335006A3FD1 /* KeyboardBackgroundTextured.png */; };
+		43DC309919470335006A3FD1 /* KeyboardNumericEntryKeyBackspaceGlyphTextured.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DC308C19470335006A3FD1 /* KeyboardNumericEntryKeyBackspaceGlyphTextured.png */; };
+		43DC309A19470335006A3FD1 /* KeyboardNumericEntryKeyPressedTextured.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DC308D19470335006A3FD1 /* KeyboardNumericEntryKeyPressedTextured.png */; };
+		43DC309B19470335006A3FD1 /* KeyboardNumericEntryKeyTextured.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DC308E19470335006A3FD1 /* KeyboardNumericEntryKeyTextured.png */; };
+		43DC309C19470335006A3FD1 /* KeyboardNumericEntryViewGridLinesTextured.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DC308F19470335006A3FD1 /* KeyboardNumericEntryViewGridLinesTextured.png */; };
+		43DC309D19470335006A3FD1 /* BSNumPadPopoverConotroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DC309119470335006A3FD1 /* BSNumPadPopoverConotroller.m */; };
+		43DC309E19470335006A3FD1 /* BSNumPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DC309319470335006A3FD1 /* BSNumPadView.m */; };
+		43DC309F19470335006A3FD1 /* BSNumPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DC309519470335006A3FD1 /* BSNumPadViewController.m */; };
+		43DC30A019470335006A3FD1 /* UIImage+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DC309719470335006A3FD1 /* UIImage+Helpers.m */; };
+		4B00E7DE1922B8ED0048742B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7DD1922B8ED0048742B /* Foundation.framework */; };
+		4B00E7E01922B8ED0048742B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7DF1922B8ED0048742B /* CoreGraphics.framework */; };
+		4B00E7E21922B8ED0048742B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00E7E11922B8ED0048742B /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		43DC30661946F5DD006A3FD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43DC30671946F5DD006A3FD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		43DC30681946F5DD006A3FD1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		43DC306A1946F5DD006A3FD1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		43DC306B1946F5DD006A3FD1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		43DC306C1946F5DD006A3FD1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		43DC306D1946F5DD006A3FD1 /* Snapshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snapshot.png; sourceTree = "<group>"; };
+		43DC306E1946F5DD006A3FD1 /* BSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAppDelegate.h; sourceTree = "<group>"; };
+		43DC306F1946F5DD006A3FD1 /* BSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAppDelegate.m; sourceTree = "<group>"; };
+		43DC30701946F5DD006A3FD1 /* BSNumPadExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BSNumPadExample-Info.plist"; sourceTree = "<group>"; };
+		43DC30711946F5DD006A3FD1 /* BSNumPadExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BSNumPadExample-Prefix.pch"; sourceTree = "<group>"; };
+		43DC30721946F5DD006A3FD1 /* BSTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTestViewController.h; sourceTree = "<group>"; };
+		43DC30731946F5DD006A3FD1 /* BSTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTestViewController.m; sourceTree = "<group>"; };
+		43DC308B19470335006A3FD1 /* KeyboardBackgroundTextured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyboardBackgroundTextured.png; sourceTree = "<group>"; };
+		43DC308C19470335006A3FD1 /* KeyboardNumericEntryKeyBackspaceGlyphTextured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyboardNumericEntryKeyBackspaceGlyphTextured.png; sourceTree = "<group>"; };
+		43DC308D19470335006A3FD1 /* KeyboardNumericEntryKeyPressedTextured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyboardNumericEntryKeyPressedTextured.png; sourceTree = "<group>"; };
+		43DC308E19470335006A3FD1 /* KeyboardNumericEntryKeyTextured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyboardNumericEntryKeyTextured.png; sourceTree = "<group>"; };
+		43DC308F19470335006A3FD1 /* KeyboardNumericEntryViewGridLinesTextured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyboardNumericEntryViewGridLinesTextured.png; sourceTree = "<group>"; };
+		43DC309019470335006A3FD1 /* BSNumPadPopoverConotroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNumPadPopoverConotroller.h; sourceTree = "<group>"; };
+		43DC309119470335006A3FD1 /* BSNumPadPopoverConotroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNumPadPopoverConotroller.m; sourceTree = "<group>"; };
+		43DC309219470335006A3FD1 /* BSNumPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNumPadView.h; sourceTree = "<group>"; };
+		43DC309319470335006A3FD1 /* BSNumPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNumPadView.m; sourceTree = "<group>"; };
+		43DC309419470335006A3FD1 /* BSNumPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNumPadViewController.h; sourceTree = "<group>"; };
+		43DC309519470335006A3FD1 /* BSNumPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNumPadViewController.m; sourceTree = "<group>"; };
+		43DC309619470335006A3FD1 /* UIImage+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Helpers.h"; sourceTree = "<group>"; };
+		43DC309719470335006A3FD1 /* UIImage+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Helpers.m"; sourceTree = "<group>"; };
+		4B00E7DA1922B8ED0048742B /* BSNumPadExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSNumPadExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B00E7DD1922B8ED0048742B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4B00E7DF1922B8ED0048742B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4B00E7E11922B8ED0048742B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4B00E7F61922B8ED0048742B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B00E7D71922B8ED0048742B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B00E7E01922B8ED0048742B /* CoreGraphics.framework in Frameworks */,
+				4B00E7E21922B8ED0048742B /* UIKit.framework in Frameworks */,
+				4B00E7DE1922B8ED0048742B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43DC30641946F5DD006A3FD1 /* BSNumPadExamples */ = {
+			isa = PBXGroup;
+			children = (
+				43DC30651946F5DD006A3FD1 /* InfoPlist.strings */,
+				43DC30671946F5DD006A3FD1 /* Images.xcassets */,
+				43DC30681946F5DD006A3FD1 /* main.m */,
+				43DC30691946F5DD006A3FD1 /* Resource */,
+				43DC306E1946F5DD006A3FD1 /* BSAppDelegate.h */,
+				43DC306F1946F5DD006A3FD1 /* BSAppDelegate.m */,
+				43DC30701946F5DD006A3FD1 /* BSNumPadExample-Info.plist */,
+				43DC30711946F5DD006A3FD1 /* BSNumPadExample-Prefix.pch */,
+				43DC30721946F5DD006A3FD1 /* BSTestViewController.h */,
+				43DC30731946F5DD006A3FD1 /* BSTestViewController.m */,
+			);
+			name = BSNumPadExamples;
+			path = SBNumPadExamples;
+			sourceTree = "<group>";
+		};
+		43DC30691946F5DD006A3FD1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				43DC306A1946F5DD006A3FD1 /* Default-568h@2x.png */,
+				43DC306B1946F5DD006A3FD1 /* Default.png */,
+				43DC306C1946F5DD006A3FD1 /* Default@2x.png */,
+				43DC306D1946F5DD006A3FD1 /* Snapshot.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		43DC308919470335006A3FD1 /* BSNumPad */ = {
+			isa = PBXGroup;
+			children = (
+				43DC308A19470335006A3FD1 /* Images */,
+				43DC309019470335006A3FD1 /* BSNumPadPopoverConotroller.h */,
+				43DC309119470335006A3FD1 /* BSNumPadPopoverConotroller.m */,
+				43DC309219470335006A3FD1 /* BSNumPadView.h */,
+				43DC309319470335006A3FD1 /* BSNumPadView.m */,
+				43DC309419470335006A3FD1 /* BSNumPadViewController.h */,
+				43DC309519470335006A3FD1 /* BSNumPadViewController.m */,
+				43DC309619470335006A3FD1 /* UIImage+Helpers.h */,
+				43DC309719470335006A3FD1 /* UIImage+Helpers.m */,
+			);
+			path = BSNumPad;
+			sourceTree = "<group>";
+		};
+		43DC308A19470335006A3FD1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				43DC308B19470335006A3FD1 /* KeyboardBackgroundTextured.png */,
+				43DC308C19470335006A3FD1 /* KeyboardNumericEntryKeyBackspaceGlyphTextured.png */,
+				43DC308D19470335006A3FD1 /* KeyboardNumericEntryKeyPressedTextured.png */,
+				43DC308E19470335006A3FD1 /* KeyboardNumericEntryKeyTextured.png */,
+				43DC308F19470335006A3FD1 /* KeyboardNumericEntryViewGridLinesTextured.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4B00E7D11922B8ED0048742B = {
+			isa = PBXGroup;
+			children = (
+				43DC308919470335006A3FD1 /* BSNumPad */,
+				43DC30641946F5DD006A3FD1 /* BSNumPadExamples */,
+				4B00E7DC1922B8ED0048742B /* Frameworks */,
+				4B00E7DB1922B8ED0048742B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B00E7DB1922B8ED0048742B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B00E7DA1922B8ED0048742B /* BSNumPadExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B00E7DC1922B8ED0048742B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B00E7DD1922B8ED0048742B /* Foundation.framework */,
+				4B00E7DF1922B8ED0048742B /* CoreGraphics.framework */,
+				4B00E7E11922B8ED0048742B /* UIKit.framework */,
+				4B00E7F61922B8ED0048742B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B00E7D91922B8ED0048742B /* BSNumPadExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B00E8061922B8EE0048742B /* Build configuration list for PBXNativeTarget "BSNumPadExample" */;
+			buildPhases = (
+				4B00E7D61922B8ED0048742B /* Sources */,
+				4B00E7D71922B8ED0048742B /* Frameworks */,
+				4B00E7D81922B8ED0048742B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BSNumPadExample;
+			productName = SBNumericPad;
+			productReference = 4B00E7DA1922B8ED0048742B /* BSNumPadExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B00E7D21922B8ED0048742B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Bogdan Stasjuk";
+			};
+			buildConfigurationList = 4B00E7D51922B8ED0048742B /* Build configuration list for PBXProject "BSNumPadExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4B00E7D11922B8ED0048742B;
+			productRefGroup = 4B00E7DB1922B8ED0048742B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B00E7D91922B8ED0048742B /* BSNumPadExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B00E7D81922B8ED0048742B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43DC309819470335006A3FD1 /* KeyboardBackgroundTextured.png in Resources */,
+				43DC309A19470335006A3FD1 /* KeyboardNumericEntryKeyPressedTextured.png in Resources */,
+				43DC309B19470335006A3FD1 /* KeyboardNumericEntryKeyTextured.png in Resources */,
+				43DC309919470335006A3FD1 /* KeyboardNumericEntryKeyBackspaceGlyphTextured.png in Resources */,
+				43DC309C19470335006A3FD1 /* KeyboardNumericEntryViewGridLinesTextured.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B00E7D61922B8ED0048742B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43DC307B1946F5DD006A3FD1 /* BSAppDelegate.m in Sources */,
+				43DC309E19470335006A3FD1 /* BSNumPadView.m in Sources */,
+				43DC30761946F5DD006A3FD1 /* main.m in Sources */,
+				43DC307D1946F5DD006A3FD1 /* BSTestViewController.m in Sources */,
+				43DC30A019470335006A3FD1 /* UIImage+Helpers.m in Sources */,
+				43DC309F19470335006A3FD1 /* BSNumPadViewController.m in Sources */,
+				43DC309D19470335006A3FD1 /* BSNumPadPopoverConotroller.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		43DC30651946F5DD006A3FD1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43DC30661946F5DD006A3FD1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B00E8041922B8ED0048742B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		4B00E8051922B8ED0048742B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B00E8071922B8EE0048742B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBNumPadExamples/BSNumPadExample-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SBNumPadExamples/BSNumPadExample-Info.plist";
+				PRODUCT_NAME = BSNumPadExample;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4B00E8081922B8EE0048742B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBNumPadExamples/BSNumPadExample-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SBNumPadExamples/BSNumPadExample-Info.plist";
+				PRODUCT_NAME = BSNumPadExample;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B00E7D51922B8ED0048742B /* Build configuration list for PBXProject "BSNumPadExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B00E8041922B8ED0048742B /* Debug */,
+				4B00E8051922B8ED0048742B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B00E8061922B8EE0048742B /* Build configuration list for PBXNativeTarget "BSNumPadExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B00E8071922B8EE0048742B /* Debug */,
+				4B00E8081922B8EE0048742B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B00E7D21922B8ED0048742B /* Project object */;
+}

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
-@interface SBTestViewController : UIViewController
+@interface BSTestViewController : UIViewController
 
 #pragma mark - Unavailable methods
 

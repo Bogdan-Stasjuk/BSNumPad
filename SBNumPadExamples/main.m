@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
-#import "SBAppDelegate.h"
+#import "BSAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
