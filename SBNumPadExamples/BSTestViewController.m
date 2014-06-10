@@ -58,7 +58,7 @@
     UITextField *textField = [self setupTextField];
     self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField];
     self.numPadPopoverConotroller.padDelegate = self;
-    self.numPadPopoverConotroller.padPosition = BSNumPadPositionBottom;
+    self.numPadPopoverConotroller.padPosition = BSPopoverPositionBottom;
 }
 
 - (void)didReceiveMemoryWarning

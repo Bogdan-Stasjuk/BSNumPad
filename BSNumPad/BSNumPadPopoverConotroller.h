@@ -9,12 +9,12 @@
 @protocol BSNumPadPopoverConotrollerDelegate;
 
 
-typedef NS_ENUM(NSUInteger, BSNumPadPosition)
+typedef NS_ENUM(NSUInteger, BSPopoverPosition)
 {
-    BSNumPadPositionLeft,
-    BSNumPadPositionTop,
-    BSNumPadPositionRight,
-    BSNumPadPositionBottom,
+    BSPopoverPositionLeft,
+    BSPopoverPositionTop,
+    BSPopoverPositionRight,
+    BSPopoverPositionBottom,
 };
 
 
@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, BSNumPadPosition)
 
 @property(nonatomic, weak) id<BSNumPadPopoverConotrollerDelegate> padDelegate;
 
-@property(nonatomic, assign) BSNumPadPosition padPosition;
+@property(nonatomic, assign) BSPopoverPosition padPosition;
 
 - (id)initWithTextField:(UITextField *)textField;
 
