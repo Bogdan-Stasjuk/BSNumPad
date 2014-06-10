@@ -11,7 +11,7 @@
 #import "BSNumPadPopoverConotroller.h"
 
 
-@interface BSTestViewController () <SBNumPadPopoverConotrollerDelegate>
+@interface BSTestViewController () <BSNumPadPopoverConotrollerDelegate>
 
 @property(nonatomic, strong) BSNumPadPopoverConotroller *numPadPopoverConotroller;
 
@@ -58,7 +58,7 @@
     UITextField *textField = [self setupTextField];
     self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField];
     self.numPadPopoverConotroller.padDelegate = self;
-    self.numPadPopoverConotroller.padPosition = SBNumPadPositionBottom;
+    self.numPadPopoverConotroller.padPosition = BSNumPadPositionBottom;
 }
 
 - (void)didReceiveMemoryWarning

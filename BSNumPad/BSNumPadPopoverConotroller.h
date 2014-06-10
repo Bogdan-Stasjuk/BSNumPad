@@ -6,27 +6,28 @@
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
 //
 
-@protocol SBNumPadPopoverConotrollerDelegate;
+@protocol BSNumPadPopoverConotrollerDelegate;
 
 
-typedef NS_ENUM(NSUInteger, SBNumPadPosition)
+typedef NS_ENUM(NSUInteger, BSNumPadPosition)
 {
-    SBNumPadPositionLeft,
-    SBNumPadPositionTop,
-    SBNumPadPositionRight,
-    SBNumPadPositionBottom,
+    BSNumPadPositionLeft,
+    BSNumPadPositionTop,
+    BSNumPadPositionRight,
+    BSNumPadPositionBottom,
 };
 
 
 @interface BSNumPadPopoverConotroller : UIPopoverController
 
-@property(nonatomic, weak) id<SBNumPadPopoverConotrollerDelegate> padDelegate;
+@property(nonatomic, weak) id<BSNumPadPopoverConotrollerDelegate> padDelegate;
 
-@property(nonatomic, assign) SBNumPadPosition padPosition;
+@property(nonatomic, assign) BSNumPadPosition padPosition;
 
 - (id)initWithTextField:(UITextField *)textField;
 
 #pragma mark -Unavailable methods
+
 + (id)new __attribute__((unavailable));
 - (id)init __attribute__((unavailable));
 - (id)initWithContentViewController:(UIViewController *)viewController __attribute__((unavailable));
@@ -34,7 +35,7 @@ typedef NS_ENUM(NSUInteger, SBNumPadPosition)
 @end
 
 
-@protocol SBNumPadPopoverConotrollerDelegate <NSObject>
+@protocol BSNumPadPopoverConotrollerDelegate <NSObject>
 
 @optional
 - (BOOL)isValidTextFieldText:(NSString *)text;

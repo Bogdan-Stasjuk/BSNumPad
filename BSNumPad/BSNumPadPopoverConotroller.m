@@ -61,20 +61,20 @@
     NSInteger padPosY = 0.f;
     UIPopoverArrowDirection arrowDirection = UIPopoverArrowDirectionAny;
     switch (self.padPosition) {
-        case SBNumPadPositionLeft:
+        case BSNumPadPositionLeft:
             padPosY = self.textField.bounds.size.height / 2;
             arrowDirection = UIPopoverArrowDirectionRight;
             break;
-        case SBNumPadPositionTop:
+        case BSNumPadPositionTop:
             padPosX = self.textField.bounds.size.width / 2;
             arrowDirection = UIPopoverArrowDirectionDown;
             break;
-        case SBNumPadPositionRight:
+        case BSNumPadPositionRight:
             padPosX = self.textField.bounds.size.width;
             padPosY = self.textField.bounds.size.height / 2;
             arrowDirection = UIPopoverArrowDirectionLeft;
             break;
-        case SBNumPadPositionBottom:
+        case BSNumPadPositionBottom:
             padPosX = self.textField.bounds.size.width / 2;
             padPosY = self.textField.bounds.size.height;
             arrowDirection = UIPopoverArrowDirectionUp;
