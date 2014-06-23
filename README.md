@@ -55,7 +55,7 @@ NumPad appears on `textFieldDidBeginEditing:` message.
 
 
 ##Numeric keyboard view: 
-<img src="https://github.com/Bogdan-Stasjuk/BSNumPad/blob/master/NumPadScreenShot.png" />
+<img src="https://github.com/Bogdan-Stasjuk/BSNumPad/master/NumPadScreenShot.png" />
 
 
 Demo
@@ -78,7 +78,7 @@ __Manual__: Copy the __BSNumPad__ folder in your project<br />
 
 Import header 
 
-#import "BSNumPadPopoverConotroller.h"
+    #import "BSNumPadPopoverConotroller.h"
 
 
 License
