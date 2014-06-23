@@ -55,7 +55,7 @@ NumPad appears on `textFieldDidBeginEditing:` message.
 
 
 ##Numeric keyboard view: 
-<img src="https://github.com/Bogdan-Stasjuk/BSNumPad/master/NumPadScreenShot.png" />
+<img src="https://raw.githubusercontent.com/Bogdan-Stasjuk/BSNumPad/master/NumPadScreenShot.png" />
 
 
 Demo
