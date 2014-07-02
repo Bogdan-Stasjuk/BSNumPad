@@ -33,7 +33,7 @@
 
 #pragma mark -Other
 
-- (id)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat
+- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat
 {
     BSNumPadViewController *numPadViewController = [[BSNumPadViewController alloc] initWithTextField:textField];
     numPadViewController.textFieldFormat = textFieldFormat;
@@ -47,12 +47,7 @@
     return self;
 }
 
-
-#pragma mark - Private methods
-
-#pragma mark -UITextFieldDelegate
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
+- (void)show
 {
     if ([self.padDelegate respondsToSelector:@selector(popoverWillAppear)]) {
         [self.padDelegate popoverWillAppear];
@@ -87,6 +82,16 @@
     
     CGRect popoverFrame = CGRectMake(padPosX, padPosY, 1.f, 1.f);
     [self presentPopoverFromRect:popoverFrame inView:self.textField permittedArrowDirections:arrowDirection animated:YES];
+}
+
+
+#pragma mark - Private methods
+
+#pragma mark -UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self show];
 }
 
 #pragma mark -UIPopoverControllerDelegate

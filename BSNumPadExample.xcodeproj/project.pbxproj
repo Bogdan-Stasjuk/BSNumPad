@@ -331,6 +331,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SBNumPadExamples/BSNumPadExample-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/SBNumPadExamples/BSNumPadExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = BSNumPadExample;
 				WRAPPER_EXTENSION = app;
 			};
@@ -344,6 +345,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SBNumPadExamples/BSNumPadExample-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/SBNumPadExamples/BSNumPadExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = BSNumPadExample;
 				WRAPPER_EXTENSION = app;
 			};

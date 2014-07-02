@@ -18,7 +18,8 @@
 
 @property(nonatomic, assign) BSPopoverPosition padPosition;
 
-- (id)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat;
+- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat;
+- (void)show;
 
 #pragma mark -Unavailable methods
 

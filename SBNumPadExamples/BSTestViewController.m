@@ -11,7 +11,7 @@
 #import "BSNumPadPopoverConotroller.h"
 
 
-@interface BSTestViewController () <BSNumPadPopoverConotrollerDelegate>
+@interface BSTestViewController () <BSNumPadPopoverConotrollerDelegate, UITextFieldDelegate>
 
 @property(nonatomic, strong) BSNumPadPopoverConotroller *numPadPopoverConotroller;
 
@@ -56,15 +56,37 @@
     [super viewDidAppear:animated];
     
     UITextField *textField = [self setupTextField];
-    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatDate];
-    self.numPadPopoverConotroller.padDelegate = self;
-    self.numPadPopoverConotroller.padPosition = BSPopoverPositionBottom;
+
+    /*
+     * Variant 1
+     */
+//    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatDate];
+//    self.numPadPopoverConotroller.padDelegate = self;
+//    self.numPadPopoverConotroller.padPosition = BSPopoverPositionBottom;
+
+    
+    /*
+     * Variant 2
+     */
+    textField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark --UITextFieldDelegate
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatFloat];
+    self.numPadPopoverConotroller.padDelegate = self;
+    self.numPadPopoverConotroller.padPosition = BSPopoverPositionBottom;
+    [self.numPadPopoverConotroller show];
+
+    return YES;
 }
 
 #pragma mark --SBNumPadPopoverConotrollerDelegate
