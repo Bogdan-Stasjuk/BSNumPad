@@ -47,7 +47,12 @@
     return self;
 }
 
-- (void)show
+
+#pragma mark - Private methods
+
+#pragma mark -UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if ([self.padDelegate respondsToSelector:@selector(popoverWillAppear)]) {
         [self.padDelegate popoverWillAppear];
@@ -82,16 +87,6 @@
     
     CGRect popoverFrame = CGRectMake(padPosX, padPosY, 1.f, 1.f);
     [self presentPopoverFromRect:popoverFrame inView:self.textField permittedArrowDirections:arrowDirection animated:YES];
-}
-
-
-#pragma mark - Private methods
-
-#pragma mark -UITextFieldDelegate
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    [self show];
 }
 
 #pragma mark -UIPopoverControllerDelegate
