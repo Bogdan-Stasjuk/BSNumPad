@@ -1,6 +1,6 @@
 //
-//  SBNumPadView.m
-//  SBNumericPad
+//  BSNumPadView.m
+//  BSNumPad
 //
 //  Created by Bogdan Stasjuk on 5/14/14.
 //  Copyright (c) 2014 Bogdan Stasjuk. All rights reserved.
@@ -41,13 +41,13 @@
 
 #pragma mark -UIView
 
-- (instancetype)init
+- (instancetype)initWithNextButton:(BOOL)nextButtonExist
 {
     self = [super init];
     if (self) {
         self.autoresizesSubviews = YES;
         self.clipsToBounds = YES;
-        [self addSubviews];
+        [self addSubviewsWithNextButton:nextButtonExist];
     }
     return self;
 }
@@ -55,7 +55,35 @@
 
 #pragma mark - Private methods
 
-- (void)addSubviews
+#pragma mark -Actions
+
+- (void)pressNumericKey:(UIButton *)button
+{
+    NSString *keyText = button.titleLabel.text;
+    
+    if ([self.delegate respondsToSelector:@selector(keyPressed:)])
+        [self.delegate keyPressed:keyText];
+}
+
+- (void)pressBackspaceKey
+{
+    if ([self.delegate respondsToSelector:@selector(backspaceKeyDidPressed)])
+    {
+        [self.delegate backspaceKeyDidPressed];
+    }
+}
+
+- (void)pressNextKey
+{
+    if ([self.delegate respondsToSelector:@selector(nextKeyPressed)])
+    {
+        [self.delegate nextKeyPressed];
+    }
+}
+
+#pragma mark -Other
+
+- (void)addSubviewsWithNextButton:(BOOL)nextButtonExist
 {
     UIImageView *keyboardBackground = [[UIImageView alloc] initWithImage:[self imageForResource:@"KeyboardBackgroundTextured"]];
     UIImageView *keyboardGridLines = [[UIImageView alloc] initWithImage:[self imageForResource:@"KeyboardNumericEntryViewGridLinesTextured"]];
@@ -77,9 +105,20 @@
     [self addSubview:[self addNumericKeyWithTitle:@"." frame:CGRectMake(0, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH - 3, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     [self addSubview:[self addNumericKeyWithTitle:@"0" frame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH - 2, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     [self addSubview:[self addBackspaceKeyWithFrame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH * 2 - 1, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH - 3, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
+    
+    if (nextButtonExist) {
+        UIButton *btnNext = [self addKeyWithTitle:@"NEXT" frame:CGRectMake(0.f, KEYBOARD_NUMERIC_KEY_HEIGHT * 4 + 5, KEYBOARD_NUMERIC_KEY_WIDTH * 3,  KEYBOARD_NUMERIC_KEY_HEIGHT) action:@selector(pressNextKey)];
+        btnNext.backgroundColor = [UIColor grayColor];
+        [self addSubview:btnNext];
+    }
 }
 
 - (UIButton *)addNumericKeyWithTitle:(NSString *)title frame:(CGRect)frame
+{
+    return [self addKeyWithTitle:title frame:frame action:@selector(pressNumericKey:)];
+}
+
+- (UIButton *)addKeyWithTitle:(NSString *)title frame:(CGRect)frame action:(SEL)action
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = frame;
@@ -96,7 +135,7 @@
     UIImage *buttonPressedImage = [self imageForResource:@"KeyboardNumericEntryKeyPressedTextured"];
     [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
     [button setBackgroundImage:buttonPressedImage forState:UIControlStateHighlighted];
-    [button addTarget:self action:@selector(pressNumericKey:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     
     return button;
 }
@@ -116,22 +155,6 @@
     [button addTarget:self action:@selector(pressBackspaceKey) forControlEvents:UIControlEventTouchUpInside];
 
     return button;
-}
-
-- (void)pressNumericKey:(UIButton *)button
-{
-    NSString *keyText = button.titleLabel.text;
-
-    if ([self.delegate respondsToSelector:@selector(keyPressed:)])
-        [self.delegate keyPressed:keyText];
-}
-
-- (void)pressBackspaceKey
-{
-    if ([self.delegate respondsToSelector:@selector(backspaceKeyDidPressed)])
-    {
-        [self.delegate backspaceKeyDidPressed];
-    }
 }
 
 - (UIImage *)imageForResource:(NSString *)imageRes

@@ -18,13 +18,18 @@
 
 @property(nonatomic, assign) BSPopoverPosition padPosition;
 
-- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat;
+- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat andNextKey:(BOOL)nextKeyExist;
+
+- (void)dismissPopoverAnimated:(BOOL)animated onNextKeyPress:(BOOL)nextKeyPressed;
+
 
 #pragma mark -Unavailable methods
 
 + (id)new __attribute__((unavailable));
 - (id)init __attribute__((unavailable));
 - (id)initWithContentViewController:(UIViewController *)viewController __attribute__((unavailable));
+
+- (void)dismissPopoverAnimated:(BOOL)animated __attribute__((unavailable));
 
 @end
 
@@ -34,6 +39,6 @@
 @optional
 - (BOOL)isValidTextFieldText:(NSString *)text;
 - (void)popoverWillAppear;
-- (void)popoverDidDisappear;
+- (void)popoverDidDisappearOnNextPress:(BOOL)nextPressed;
 
 @end

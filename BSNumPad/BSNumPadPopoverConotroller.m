@@ -11,7 +11,7 @@
 #import "BSNumPadViewController.h"
 
 
-@interface BSNumPadPopoverConotroller () <UITextFieldDelegate, UIPopoverControllerDelegate>
+@interface BSNumPadPopoverConotroller () <UITextFieldDelegate, UIPopoverControllerDelegate, BSNumPadViewControllerDelegate>
 
 @property(nonatomic, strong) UITextField *textField;
 
@@ -22,21 +22,14 @@
 
 #pragma mark - Public methods
 
-#pragma mark -UIPopoverController
-
-- (void)dismissPopoverAnimated:(BOOL)animated
-{
-    [super dismissPopoverAnimated:animated];
-    
-    [self popoverDidDisappear];
-}
-
 #pragma mark -Other
 
-- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat
+- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat andNextKey:(BOOL)nextKeyExist
 {
-    BSNumPadViewController *numPadViewController = [[BSNumPadViewController alloc] initWithTextField:textField];
+    BSNumPadViewController *numPadViewController = [[BSNumPadViewController alloc] initWithTextField:textField andNextKey:nextKeyExist];
     numPadViewController.textFieldFormat = textFieldFormat;
+    numPadViewController.delegate = self;
+    
     self = [super initWithContentViewController:numPadViewController];
     if (self) {
         self.delegate = self;
@@ -45,6 +38,13 @@
         self.textField.delegate = self;
     }
     return self;
+}
+
+- (void)dismissPopoverAnimated:(BOOL)animated onNextKeyPress:(BOOL)nextKeyPressed
+{
+    [super dismissPopoverAnimated:animated];
+    
+    [self popoverDidDisappearOnNextPress:nextKeyPressed];
 }
 
 
@@ -93,26 +93,40 @@
 
 - (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController
 {
-    if ([self.padDelegate respondsToSelector:@selector(isValidTextFieldText:)]) {
-        return [self.padDelegate isValidTextFieldText:self.textField.text];
-    }
-    return YES;
+    return [self isValidText];
 }
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
-    [self popoverDidDisappear];
+    [self popoverDidDisappearOnNextPress:NO];
+}
+
+#pragma mark -BSNumPadViewControllerDelegate
+
+- (void)nextKeyPressed
+{
+    if ([self isValidText]) {
+        [self dismissPopoverAnimated:YES onNextKeyPress:YES];
+    }
 }
 
 #pragma mark -Other
 
-- (void)popoverDidDisappear
+- (void)popoverDidDisappearOnNextPress:(BOOL)nextPressed
 {
     [self.textField resignFirstResponder];
     
-    if ([self.padDelegate respondsToSelector:@selector(popoverDidDisappear)]) {
-        [self.padDelegate popoverDidDisappear];
+    if ([self.padDelegate respondsToSelector:@selector(popoverDidDisappearOnNextPress:)]) {
+        [self.padDelegate popoverDidDisappearOnNextPress:nextPressed];
     }
+}
+
+- (BOOL)isValidText
+{
+    if ([self.padDelegate respondsToSelector:@selector(isValidTextFieldText:)]) {
+        return [self.padDelegate isValidTextFieldText:self.textField.text];
+    }
+    return YES;
 }
 
 @end

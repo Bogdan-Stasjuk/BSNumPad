@@ -81,7 +81,7 @@
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatFloat];
+    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatFloat andNextKey:YES];
     self.numPadPopoverConotroller.padDelegate = self;
     self.numPadPopoverConotroller.padPosition = BSPopoverPositionBottom;
     
@@ -100,7 +100,7 @@
     return YES;
 }
 
-- (void)popoverDidDisappear
+- (void)popoverDidDisappearOnNextPress:(BOOL)nextPressed
 {
 //    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover did disappear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }

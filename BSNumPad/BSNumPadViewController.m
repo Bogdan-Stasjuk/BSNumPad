@@ -43,7 +43,7 @@ NSString * const DateTimeDelimeter = @" ";
 
 #pragma mark - Public methods
 
-- (id)initWithTextField:(UITextField *)textField
+- (id)initWithTextField:(UITextField *)textField andNextKey:(BOOL)nextKeyExist
 {
     self = [super init];
     if (self) {
@@ -53,8 +53,10 @@ NSString * const DateTimeDelimeter = @" ";
         self.digitCntBeforeDot = 6;
         self.digitCntAfterDot = 3;
 
-        self.preferredContentSize = CGSizeMake(320.f, 215.f);
-        BSNumPadView *keyboard = [BSNumPadView new];
+        CGFloat preferredContentHeight = nextKeyExist ? 270.f : 215.f;
+        self.preferredContentSize = CGSizeMake(320.f, preferredContentHeight);
+        
+        BSNumPadView *keyboard = [[BSNumPadView alloc] initWithNextButton:nextKeyExist];
         keyboard.delegate = self;
         self.view = keyboard;
     }
@@ -108,6 +110,14 @@ NSString * const DateTimeDelimeter = @" ";
             break;
     }
 }
+
+- (void)nextKeyPressed
+{
+    if ([self.delegate respondsToSelector:@selector(nextKeyPressed)]) {
+        [self.delegate nextKeyPressed];
+    }
+}
+
 
 #pragma mark -Other
 
