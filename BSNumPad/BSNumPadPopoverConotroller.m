@@ -93,7 +93,7 @@
 
 - (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController
 {
-    return [self isValidText];
+    return [self isValidTextOnNextKeyPress:NO];
 }
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
@@ -105,7 +105,7 @@
 
 - (void)nextKeyPressed
 {
-    if ([self isValidText]) {
+    if ([self isValidTextOnNextKeyPress:YES]) {
         [self dismissPopoverAnimated:YES onNextKeyPress:YES];
     }
 }
@@ -121,10 +121,10 @@
     }
 }
 
-- (BOOL)isValidText
+- (BOOL)isValidTextOnNextKeyPress:(BOOL)nextPressed
 {
-    if ([self.padDelegate respondsToSelector:@selector(isValidTextFieldText:)]) {
-        return [self.padDelegate isValidTextFieldText:self.textField.text];
+    if ([self.padDelegate respondsToSelector:@selector(isValidTextFieldText:onNextKeyPress:)]) {
+        return [self.padDelegate isValidTextFieldText:self.textField.text onNextKeyPress:nextPressed];
     }
     return YES;
 }

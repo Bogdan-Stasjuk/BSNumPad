@@ -37,7 +37,7 @@
 @protocol BSNumPadPopoverConotrollerDelegate <NSObject>
 
 @optional
-- (BOOL)isValidTextFieldText:(NSString *)text;
+- (BOOL)isValidTextFieldText:(NSString *)text onNextKeyPress:(BOOL)nextPressed;
 - (void)popoverWillAppear;
 - (void)popoverDidDisappearOnNextPress:(BOOL)nextPressed;
 

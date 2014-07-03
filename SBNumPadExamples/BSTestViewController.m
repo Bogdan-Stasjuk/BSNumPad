@@ -95,7 +95,7 @@
 //    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover will appear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
-- (BOOL)isValidTextFieldText:(NSString *)text
+- (BOOL)isValidTextFieldText:(NSString *)text onNextKeyPress:(BOOL)nextPressed
 {
     return YES;
 }
