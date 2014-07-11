@@ -42,7 +42,7 @@ __BSNumPadPopoverConotrollerDelegate__ protocol:
 - (void)popoverDidDisappearOnNextPress:(BOOL)nextPressed;
 ```
 
-`isValidTextFieldText:` with result `TRUE` gives possibility to dismiss numpad view.
+`isValidTextFieldText:onNextKeyPress:` with result `TRUE` gives possibility to dismiss numpad view.
 
 
 ##Initialization
