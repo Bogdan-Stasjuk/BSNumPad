@@ -16,6 +16,7 @@
 @property(weak, nonatomic)      UITextField         *textField;
 @property(assign, nonatomic) id<UITextInput>        textInputDelegate;
 
+@property(strong, nonatomic) BSNumPadView           *keyboard;
 @end
 
 
@@ -56,9 +57,9 @@ NSString * const DateTimeDelimeter = @" ";
         CGFloat preferredContentHeight = nextKeyExist ? 270.f : 215.f;
         self.preferredContentSize = CGSizeMake(320.f, preferredContentHeight);
         
-        BSNumPadView *keyboard = [[BSNumPadView alloc] initWithNextButton:nextKeyExist decimalKey:decimalKeyExist];
-        keyboard.delegate = self;
-        self.view = keyboard;
+        self.keyboard = [[BSNumPadView alloc] initWithNextButton:nextKeyExist decimalKey:decimalKeyExist];
+        self.keyboard.delegate = self;
+        self.view = self.keyboard;
     }
     return self;
 }
@@ -296,6 +297,11 @@ NSString * const DateTimeDelimeter = @" ";
 - (void)backspacePressedHandlerForDate
 {
     [self.textInputDelegate deleteBackward];
+}
+
+- (void)setNextButtonTitle:(NSString *)inTitle
+{
+    self.keyboard.nextButtonTitle = inTitle;
 }
 
 @end

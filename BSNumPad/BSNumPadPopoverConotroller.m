@@ -29,13 +29,14 @@
 
 #pragma mark -Other
 
-- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat andNextKey:(BOOL)nextKeyExist
+- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat andNextKey:(BOOL)nextKeyExist nextButtonTitle:(NSString *)nextButtonTitle
 {
     BOOL includeDecimalKey = (textFieldFormat == BSTextFieldFormatFloat);
     
     BSNumPadViewController *numPadViewController = [[BSNumPadViewController alloc] initWithTextField:textField andNextKey:nextKeyExist decimalKey:includeDecimalKey];
     numPadViewController.textFieldFormat = textFieldFormat;
     numPadViewController.delegate = self;
+    [numPadViewController setNextButtonTitle:nextButtonTitle];
     
     self = [super initWithContentViewController:numPadViewController];
     if (self) {

@@ -30,8 +30,7 @@
 
 
 @interface BSNumPadView()
-
-
+@property (nonatomic, strong) UIButton *btnNext;
 @end
 
 
@@ -47,6 +46,7 @@
     if (self) {
         self.autoresizesSubviews = YES;
         self.clipsToBounds = YES;
+        self.nextButtonTitle = @"NEXT";
         [self addSubviewsWithNextButton:nextButtonExist decimalKey:decimalKeyExist];
     }
     return self;
@@ -110,9 +110,9 @@
     [self addSubview:[self addBackspaceKeyWithFrame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH * 2 - 1, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH - 3, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     
     if (nextButtonExist) {
-        UIButton *btnNext = [self addKeyWithTitle:@"NEXT" frame:CGRectMake(0.f, KEYBOARD_NUMERIC_KEY_HEIGHT * 4 + 5, KEYBOARD_NUMERIC_KEY_WIDTH * 3,  KEYBOARD_NUMERIC_KEY_HEIGHT) action:@selector(pressNextKey)];
-        btnNext.backgroundColor = [UIColor grayColor];
-        [self addSubview:btnNext];
+        self.btnNext = [self addKeyWithTitle:self.nextButtonTitle frame:CGRectMake(0.f, KEYBOARD_NUMERIC_KEY_HEIGHT * 4 + 5, KEYBOARD_NUMERIC_KEY_WIDTH * 3,  KEYBOARD_NUMERIC_KEY_HEIGHT) action:@selector(pressNextKey)];
+        self.btnNext.backgroundColor = [UIColor grayColor];
+        [self addSubview:self.btnNext];
     }
 }
 
@@ -172,6 +172,16 @@
     NSData *imgData = [NSData dataWithContentsOfURL:url];
 
     return [UIImage imageWithData:imgData scale:2.f];
+}
+
+- (void)setNextButtonTitle:(NSString *)nextButtonTitle
+{
+    if (!nextButtonTitle)
+        nextButtonTitle = @"NEXT";
+
+    _nextButtonTitle = nextButtonTitle;
+    if (self.btnNext)
+        [self.btnNext setTitle:nextButtonTitle forState:UIControlStateNormal];
 }
 
 @end

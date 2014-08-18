@@ -15,7 +15,7 @@
 
 
 - (instancetype)initWithNextButton:(BOOL)nextButtonExist decimalKey:(BOOL)decimalKeyExist;
-
+@property (nonatomic, strong) NSString *nextButtonTitle;
 
 #pragma mark - Unavailable methods
 
