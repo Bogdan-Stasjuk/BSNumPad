@@ -18,6 +18,7 @@
 
 @property(nonatomic, assign) BSPopoverPosition padPosition;
 
+/* Pass nil for nextButtonTitle to use the default, "NEXT" */
 - (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat andNextKey:(BOOL)nextKeyExist nextButtonTitle:(NSString *)nextButtonTitle;
 
 - (void)dismissPopoverAnimated:(BOOL)animated onNextKeyPress:(BOOL)nextKeyPressed;
