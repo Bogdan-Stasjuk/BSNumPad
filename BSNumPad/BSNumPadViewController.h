@@ -21,7 +21,7 @@
 @property(weak, nonatomic) id<BSNumPadViewControllerDelegate> delegate;
 
 
-- (id)initWithTextField:(UITextField *)textField andNextKey:(BOOL)nextKeyExist;
+- (id)initWithTextField:(UITextField *)textField andNextKey:(BOOL)nextKeyExist decimalKey:(BOOL)decimalKeyExist;
 
 #pragma mark - Unavailable methods
 

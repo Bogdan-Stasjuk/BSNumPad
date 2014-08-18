@@ -43,7 +43,7 @@ NSString * const DateTimeDelimeter = @" ";
 
 #pragma mark - Public methods
 
-- (id)initWithTextField:(UITextField *)textField andNextKey:(BOOL)nextKeyExist
+- (id)initWithTextField:(UITextField *)textField andNextKey:(BOOL)nextKeyExist decimalKey:(BOOL)decimalKeyExist
 {
     self = [super init];
     if (self) {
@@ -56,7 +56,7 @@ NSString * const DateTimeDelimeter = @" ";
         CGFloat preferredContentHeight = nextKeyExist ? 270.f : 215.f;
         self.preferredContentSize = CGSizeMake(320.f, preferredContentHeight);
         
-        BSNumPadView *keyboard = [[BSNumPadView alloc] initWithNextButton:nextKeyExist];
+        BSNumPadView *keyboard = [[BSNumPadView alloc] initWithNextButton:nextKeyExist decimalKey:decimalKeyExist];
         keyboard.delegate = self;
         self.view = keyboard;
     }
@@ -85,7 +85,8 @@ NSString * const DateTimeDelimeter = @" ";
 {
     switch (self.textFieldFormat) {
         case BSTextFieldFormatFloat:
-            [self keyPressedHandlerForFloat:key];
+        case BSTextFieldFormatInteger:
+            [self keyPressedHandlerForNumber:key];
             break;
         case BSTextFieldFormatDate:
             [self keyPressedHandlerForDate:key];
@@ -100,7 +101,8 @@ NSString * const DateTimeDelimeter = @" ";
 {
     switch (self.textFieldFormat) {
         case BSTextFieldFormatFloat:
-            [self backspacePressedHandlerForFloat];
+        case BSTextFieldFormatInteger:
+            [self backspacePressedHandlerForNumber];
             break;
         case BSTextFieldFormatDate:
             [self backspacePressedHandlerForDate];
@@ -130,7 +132,7 @@ NSString * const DateTimeDelimeter = @" ";
     return inputViewCap;
 }
 
-- (void)keyPressedHandlerForFloat:(NSString *)key
+- (void)keyPressedHandlerForNumber:(NSString *)key
 {
     BOOL isDot = [key isEqualToString:Dot];
     NSRange dotRange = [_textField.text rangeOfString:Dot];
@@ -278,7 +280,7 @@ NSString * const DateTimeDelimeter = @" ";
     }
 }
 
-- (void)backspacePressedHandlerForFloat
+- (void)backspacePressedHandlerForNumber
 {
     if ([@"0." isEqualToString:_textField.text])
     {

@@ -41,13 +41,13 @@
 
 #pragma mark -UIView
 
-- (instancetype)initWithNextButton:(BOOL)nextButtonExist
+- (instancetype)initWithNextButton:(BOOL)nextButtonExist decimalKey:(BOOL)decimalKeyExist
 {
     self = [super init];
     if (self) {
         self.autoresizesSubviews = YES;
         self.clipsToBounds = YES;
-        [self addSubviewsWithNextButton:nextButtonExist];
+        [self addSubviewsWithNextButton:nextButtonExist decimalKey:decimalKeyExist];
     }
     return self;
 }
@@ -83,7 +83,7 @@
 
 #pragma mark -Other
 
-- (void)addSubviewsWithNextButton:(BOOL)nextButtonExist
+- (void)addSubviewsWithNextButton:(BOOL)nextButtonExist decimalKey:(BOOL)decimalKeyExist
 {
     UIImageView *keyboardBackground = [[UIImageView alloc] initWithImage:[self imageForResource:@"KeyboardBackgroundTextured"]];
     UIImageView *keyboardGridLines = [[UIImageView alloc] initWithImage:[self imageForResource:@"KeyboardNumericEntryViewGridLinesTextured"]];
@@ -102,7 +102,10 @@
     [self addSubview:[self addNumericKeyWithTitle:@"8" frame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH - 2, KEYBOARD_NUMERIC_KEY_HEIGHT * 2 + 3, KEYBOARD_NUMERIC_KEY_WIDTH , KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     [self addSubview:[self addNumericKeyWithTitle:@"9" frame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH * 2 - 1, KEYBOARD_NUMERIC_KEY_HEIGHT * 2 + 3, KEYBOARD_NUMERIC_KEY_WIDTH, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     
-    [self addSubview:[self addNumericKeyWithTitle:@"." frame:CGRectMake(0, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH - 3, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
+    if (decimalKeyExist) {
+        [self addSubview:[self addNumericKeyWithTitle:@"." frame:CGRectMake(0, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH - 3, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
+    }
+    
     [self addSubview:[self addNumericKeyWithTitle:@"0" frame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH - 2, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     [self addSubview:[self addBackspaceKeyWithFrame:CGRectMake(KEYBOARD_NUMERIC_KEY_WIDTH * 2 - 1, KEYBOARD_NUMERIC_KEY_HEIGHT * 3 + 4, KEYBOARD_NUMERIC_KEY_WIDTH - 3, KEYBOARD_NUMERIC_KEY_HEIGHT)]];
     

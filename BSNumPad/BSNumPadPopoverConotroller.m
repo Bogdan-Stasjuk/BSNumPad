@@ -31,7 +31,9 @@
 
 - (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat andNextKey:(BOOL)nextKeyExist
 {
-    BSNumPadViewController *numPadViewController = [[BSNumPadViewController alloc] initWithTextField:textField andNextKey:nextKeyExist];
+    BOOL includeDecimalKey = (textFieldFormat == BSTextFieldFormatFloat);
+    
+    BSNumPadViewController *numPadViewController = [[BSNumPadViewController alloc] initWithTextField:textField andNextKey:nextKeyExist decimalKey:includeDecimalKey];
     numPadViewController.textFieldFormat = textFieldFormat;
     numPadViewController.delegate = self;
     
