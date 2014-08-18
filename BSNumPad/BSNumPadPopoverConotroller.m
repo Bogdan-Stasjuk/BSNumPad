@@ -10,6 +10,9 @@
 
 #import "BSNumPadViewController.h"
 
+#if ! __has_feature(objc_arc)
+    #warning This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
+#endif
 
 @interface BSNumPadPopoverConotroller () <UITextFieldDelegate, UIPopoverControllerDelegate, BSNumPadViewControllerDelegate>
 
@@ -19,6 +22,8 @@
 
 
 @implementation BSNumPadPopoverConotroller
+
+@synthesize textField = _textField;
 
 #pragma mark - Public methods
 
@@ -35,9 +40,30 @@
         self.delegate = self;
         
         self.textField = textField;
-        self.textField.delegate = self;
     }
     return self;
+}
+
+- (void)setTextField:(UITextField *)inTextField
+{
+    if (_textField) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:UITextFieldTextDidBeginEditingNotification
+                                                      object:_textField];
+    }
+
+    _textField = inTextField;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textFieldDidBeginEditing:)
+                                                 name:UITextFieldTextDidBeginEditingNotification
+                                               object:_textField];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UITextFieldTextDidBeginEditingNotification
+                                                  object:self.textField];
 }
 
 - (void)dismissPopoverAnimated:(BOOL)animated onNextKeyPress:(BOOL)nextKeyPressed
