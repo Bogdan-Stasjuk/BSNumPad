@@ -14,8 +14,8 @@
 @property(weak, nonatomic) id<SBNumPadViewDelegate> delegate;
 
 
-- (instancetype)initWithNextButton:(BOOL)nextButtonExist;
-
+- (instancetype)initWithNextButton:(BOOL)nextButtonExist decimalKey:(BOOL)decimalKeyExist;
+@property (nonatomic, strong) NSString *nextButtonTitle;
 
 #pragma mark - Unavailable methods
 

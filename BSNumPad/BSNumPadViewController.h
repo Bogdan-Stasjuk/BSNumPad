@@ -18,10 +18,14 @@
 @property(nonatomic, assign) NSUInteger         digitCntAfterDot;
 @property(nonatomic, assign) BSTextFieldFormat  textFieldFormat;
 
+
+- (void)setNextButtonTitle:(NSString *)inTitle;
+
+
 @property(weak, nonatomic) id<BSNumPadViewControllerDelegate> delegate;
 
 
-- (id)initWithTextField:(UITextField *)textField andNextKey:(BOOL)nextKeyExist;
+- (id)initWithTextField:(UITextField *)textField andNextKey:(BOOL)nextKeyExist decimalKey:(BOOL)decimalKeyExist;
 
 #pragma mark - Unavailable methods
 

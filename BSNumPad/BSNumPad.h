@@ -18,4 +18,5 @@ typedef NS_ENUM(Byte, BSTextFieldFormat)
 {
     BSTextFieldFormatFloat,
     BSTextFieldFormatDate,
+    BSTextFieldFormatInteger
 };

@@ -16,6 +16,7 @@
 @property(weak, nonatomic)      UITextField         *textField;
 @property(assign, nonatomic) id<UITextInput>        textInputDelegate;
 
+@property(strong, nonatomic) BSNumPadView           *keyboard;
 @end
 
 
@@ -43,7 +44,7 @@ NSString * const DateTimeDelimeter = @" ";
 
 #pragma mark - Public methods
 
-- (id)initWithTextField:(UITextField *)textField andNextKey:(BOOL)nextKeyExist
+- (id)initWithTextField:(UITextField *)textField andNextKey:(BOOL)nextKeyExist decimalKey:(BOOL)decimalKeyExist
 {
     self = [super init];
     if (self) {
@@ -56,9 +57,9 @@ NSString * const DateTimeDelimeter = @" ";
         CGFloat preferredContentHeight = nextKeyExist ? 270.f : 215.f;
         self.preferredContentSize = CGSizeMake(320.f, preferredContentHeight);
         
-        BSNumPadView *keyboard = [[BSNumPadView alloc] initWithNextButton:nextKeyExist];
-        keyboard.delegate = self;
-        self.view = keyboard;
+        self.keyboard = [[BSNumPadView alloc] initWithNextButton:nextKeyExist decimalKey:decimalKeyExist];
+        self.keyboard.delegate = self;
+        self.view = self.keyboard;
     }
     return self;
 }
@@ -85,7 +86,8 @@ NSString * const DateTimeDelimeter = @" ";
 {
     switch (self.textFieldFormat) {
         case BSTextFieldFormatFloat:
-            [self keyPressedHandlerForFloat:key];
+        case BSTextFieldFormatInteger:
+            [self keyPressedHandlerForNumber:key];
             break;
         case BSTextFieldFormatDate:
             [self keyPressedHandlerForDate:key];
@@ -100,7 +102,8 @@ NSString * const DateTimeDelimeter = @" ";
 {
     switch (self.textFieldFormat) {
         case BSTextFieldFormatFloat:
-            [self backspacePressedHandlerForFloat];
+        case BSTextFieldFormatInteger:
+            [self backspacePressedHandlerForNumber];
             break;
         case BSTextFieldFormatDate:
             [self backspacePressedHandlerForDate];
@@ -130,7 +133,35 @@ NSString * const DateTimeDelimeter = @" ";
     return inputViewCap;
 }
 
-- (void)keyPressedHandlerForFloat:(NSString *)key
+- (NSRange)rangeFromTextRange:(UITextRange *)textRange inTextInputView:(id<UITextInput>)textInputView {
+    
+    UITextPosition* beginning = textInputView.beginningOfDocument;
+    UITextPosition* start = textRange.start;
+    UITextPosition* end = textRange.end;
+    
+    const NSInteger location = [textInputView offsetFromPosition:beginning toPosition:start];
+    const NSInteger length = [textInputView offsetFromPosition:start toPosition:end];
+    
+    return NSMakeRange(location, length);
+}
+
+- (void)insertTextIfValidated:(NSString *)text
+{
+    BOOL shouldInsert = YES;
+
+    if ([self.textField.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
+        NSRange selectedRange = [self rangeFromTextRange:self.textField.selectedTextRange
+                                         inTextInputView:self.textField];
+        shouldInsert = [self.textField.delegate textField:self.textField
+                            shouldChangeCharactersInRange:selectedRange
+                                        replacementString:text];
+    }
+    
+    if (shouldInsert)
+        [self.textField insertText:text];
+}
+
+- (void)keyPressedHandlerForNumber:(NSString *)key
 {
     BOOL isDot = [key isEqualToString:Dot];
     NSRange dotRange = [_textField.text rangeOfString:Dot];
@@ -138,9 +169,9 @@ NSString * const DateTimeDelimeter = @" ";
     if (isDot)
     {
         if (dotRange.location == NSNotFound && _textField.text.length == 0)
-            [self.textInputDelegate insertText:[@"0" stringByAppendingString:Dot]];
+            [self insertTextIfValidated:[@"0" stringByAppendingString:Dot]];
         else if (dotRange.location == NSNotFound)
-            [self.textInputDelegate insertText:Dot];
+            [self insertTextIfValidated:Dot];
     }
     else
     {
@@ -159,7 +190,7 @@ NSString * const DateTimeDelimeter = @" ";
         
         if (dotRange.location == NSNotFound || _textField.text.length <= dotRange.location + self.digitCntAfterDot)
         {
-            [self.textInputDelegate insertText:key];
+            [self insertTextIfValidated:key];
         }
     }
 }
@@ -176,74 +207,74 @@ NSString * const DateTimeDelimeter = @" ";
             if (digit > 3) {
                 return;
             }
-            [self.textInputDelegate insertText:key];
+            [self insertTextIfValidated:key];
             break;
         case 1: {
             Byte firstDigit = _textField.text.integerValue;
             if (firstDigit == 3 && digit > 1) {
                 return;
             }
-            [self.textInputDelegate insertText:[key stringByAppendingString:DateDelimeter]];
+            [self insertTextIfValidated:[key stringByAppendingString:DateDelimeter]];
         }
             break;
         case 2:
             if (digit > 1) {
                 return;
             }
-            [self.textInputDelegate insertText:[DateDelimeter stringByAppendingString:key]];
+            [self insertTextIfValidated:[DateDelimeter stringByAppendingString:key]];
             break;
         case 3:
             if (digit > 1) {
                 return;
             }
-            [self.textInputDelegate insertText:key];
+            [self insertTextIfValidated:key];
             break;
         case 4: {
             NSString *month = [_textField.text substringFromIndex:3];
             if (month.integerValue == 1 && digit > 2) {
                 return;
             }
-            [self.textInputDelegate insertText:[key stringByAppendingString:DateDelimeter]];
+            [self insertTextIfValidated:[key stringByAppendingString:DateDelimeter]];
         }
             break;
         case 5: {
             if (digit != 2) {
                 return;
             }
-            [self.textInputDelegate insertText:[DateDelimeter stringByAppendingString:key]];
+            [self insertTextIfValidated:[DateDelimeter stringByAppendingString:key]];
         }
             break;
         case 6: {
             if (digit != 2) {
                 return;
             }
-            [self.textInputDelegate insertText:key];
+            [self insertTextIfValidated:key];
         }
             break;
         case 7: {
-            [self.textInputDelegate insertText:key];
+            [self insertTextIfValidated:key];
         }
             break;
         case 8: {
-            [self.textInputDelegate insertText:key];
+            [self insertTextIfValidated:key];
         }
             break;
         case 9: {
-            [self.textInputDelegate insertText:[key stringByAppendingString:@" "]];
+            [self insertTextIfValidated:[key stringByAppendingString:@" "]];
         }
             break;
         case 10: {
             if (digit > 2) {
                 return;
             }
-            [self.textInputDelegate insertText:[DateTimeDelimeter stringByAppendingString:key]];
+            [self insertTextIfValidated:[DateTimeDelimeter stringByAppendingString:key]];
         }
             break;
         case 11: {
             if (digit > 2) {
                 return;
             }
-            [self.textInputDelegate insertText:key];
+            [self insertTextIfValidated:key];
         }
             break;
         case 12: {
@@ -251,25 +282,25 @@ NSString * const DateTimeDelimeter = @" ";
             if (hours.integerValue == 2 && digit > 3) {
                 return;
             }
-            [self.textInputDelegate insertText:[key stringByAppendingString:TimeDelimeter]];
+            [self insertTextIfValidated:[key stringByAppendingString:TimeDelimeter]];
         }
             break;
         case 13: {
             if (digit > 5) {
                 return;
             }
-            [self.textInputDelegate insertText:[TimeDelimeter stringByAppendingString:key]];
+            [self insertTextIfValidated:[TimeDelimeter stringByAppendingString:key]];
         }
             break;
         case 14: {
             if (digit > 5) {
                 return;
             }
-            [self.textInputDelegate insertText:key];
+            [self insertTextIfValidated:key];
         }
             break;
         case 15: {
-            [self.textInputDelegate insertText:key];
+            [self insertTextIfValidated:key];
         }
             break;
             
@@ -278,7 +309,7 @@ NSString * const DateTimeDelimeter = @" ";
     }
 }
 
-- (void)backspacePressedHandlerForFloat
+- (void)backspacePressedHandlerForNumber
 {
     if ([@"0." isEqualToString:_textField.text])
     {
@@ -294,6 +325,11 @@ NSString * const DateTimeDelimeter = @" ";
 - (void)backspacePressedHandlerForDate
 {
     [self.textInputDelegate deleteBackward];
+}
+
+- (void)setNextButtonTitle:(NSString *)inTitle
+{
+    self.keyboard.nextButtonTitle = inTitle;
 }
 
 @end
