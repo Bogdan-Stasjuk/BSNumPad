@@ -7,11 +7,9 @@ Numeric keyboard in UIPopoverController for UITextField inspired by [ZenKeyboard
 
 ```objc
 @property(nonatomic, weak) id<BSNumPadPopoverConotrollerDelegate> padDelegate;
-
 @property(nonatomic, assign) BSPopoverPosition padPosition;
 
-- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat andNextKey:(BOOL)nextKeyExist;
-
+- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat andNextKey:(BOOL)nextKeyExist nextButtonTitle:(NSString *)nextButtonTitle;
 - (void)dismissPopoverAnimated:(BOOL)animated onNextKeyPress:(BOOL)nextKeyPressed;
 ```
 
@@ -30,6 +28,7 @@ typedef NS_ENUM(Byte, BSTextFieldFormat)
 {
     BSTextFieldFormatFloat,
     BSTextFieldFormatDate,
+    BSTextFieldFormatInteger
 };
 ```
 
@@ -48,7 +47,7 @@ __BSNumPadPopoverConotrollerDelegate__ protocol:
 ##Initialization
 
 ```objc
-    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatFloat andNextKey:YES];
+    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatFloat andNextKey:YES nextButtonTitle:nil];
     self.numPadPopoverConotroller.padDelegate = self;
     self.numPadPopoverConotroller.padPosition = BSPopoverPositionBottom;
 ```
