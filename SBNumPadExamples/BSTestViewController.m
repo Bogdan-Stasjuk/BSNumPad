@@ -25,16 +25,14 @@
 #pragma mark -Static
 
 
-+ (CGFloat)screenWidth
-{
++ (CGFloat)screenWidth {
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     
     return orientation == UIDeviceOrientationPortrait ? [[UIScreen mainScreen] bounds].size.width
     : [[UIScreen mainScreen] bounds].size.height;
 }
 
-+ (CGFloat)screenHeight
-{
++ (CGFloat)screenHeight {
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     
     return orientation == UIDeviceOrientationPortrait ? [[UIScreen mainScreen] bounds].size.height
@@ -45,14 +43,7 @@
 
 #pragma mark --UIViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     UITextField *textField = [self setupTextField];
@@ -71,16 +62,14 @@
     textField.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark --UITextFieldDelegate
 
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatFloat andNextKey:YES nextButtonTitle:nil];
     self.numPadPopoverConotroller.padDelegate = self;
     self.numPadPopoverConotroller.padPosition = BSPopoverPositionBottom;
@@ -90,25 +79,21 @@
 
 #pragma mark --SBNumPadPopoverConotrollerDelegate
 
-- (void)popoverWillAppear
-{
+- (void)popoverWillAppear {
 //    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover will appear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
-- (BOOL)isValidTextFieldText:(NSString *)text onNextKeyPress:(BOOL)nextPressed
-{
+- (BOOL)isValidTextFieldText:(NSString *)text onNextKeyPress:(BOOL)nextPressed {
     return YES;
 }
 
-- (void)popoverDidDisappearOnNextPress:(BOOL)nextPressed
-{
+- (void)popoverDidDisappearOnNextPress:(BOOL)nextPressed {
 //    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Popover did disappear" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
 #pragma mark --Other
 
-- (UITextField *)setupTextField
-{
+- (UITextField *)setupTextField {
     CGFloat textFieldWidth = 200.f;
     CGFloat textFieldHeight = 30.f;
     UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake((self.view.frame.size.width - textFieldWidth) / 2,
