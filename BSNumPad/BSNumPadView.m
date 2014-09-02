@@ -14,8 +14,8 @@
 #define KEYBOARD_NUMERIC_KEY_WIDTH 108
 #define KEYBOARD_NUMERIC_KEY_HEIGHT 53
 
-#define RGB(r, g, b)                    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
-#define RGBA(r, g, b, a)                [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 #define FONT_SIZE_SMALL 12.0f
 #define FONT_SIZE_NORMAL 14.0f
@@ -30,7 +30,9 @@
 
 
 @interface BSNumPadView()
-@property (nonatomic, strong) UIButton *btnNext;
+
+@property (strong, nonatomic) UIButton *btnNext;
+
 @end
 
 

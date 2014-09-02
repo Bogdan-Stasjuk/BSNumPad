@@ -12,10 +12,11 @@
 @interface BSNumPadView : UIView
 
 @property(weak, nonatomic) id<SBNumPadViewDelegate> delegate;
+@property(strong, nonatomic) NSString *nextButtonTitle;
 
 
 - (instancetype)initWithNextButton:(BOOL)nextButtonExist decimalKey:(BOOL)decimalKeyExist;
-@property (nonatomic, strong) NSString *nextButtonTitle;
+
 
 #pragma mark - Unavailable methods
 

@@ -14,9 +14,9 @@
 
 @interface BSNumPadPopoverConotroller : UIPopoverController
 
-@property(nonatomic, weak) id<BSNumPadPopoverConotrollerDelegate> padDelegate;
+@property(weak, nonatomic) id<BSNumPadPopoverConotrollerDelegate> padDelegate;
 
-@property(nonatomic, assign) BSPopoverPosition padPosition;
+@property(assign, nonatomic) BSPopoverPosition padPosition;
 
 /* Pass nil for nextButtonTitle to use the default, "NEXT" */
 - (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat andNextKey:(BOOL)nextKeyExist nextButtonTitle:(NSString *)nextButtonTitle;

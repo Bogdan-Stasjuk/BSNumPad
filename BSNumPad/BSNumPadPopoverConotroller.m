@@ -16,14 +16,12 @@
 
 @interface BSNumPadPopoverConotroller () <UITextFieldDelegate, UIPopoverControllerDelegate, BSNumPadViewControllerDelegate>
 
-@property(nonatomic, strong) UITextField *textField;
+@property(nonatomic, weak) UITextField *textField;
 
 @end
 
 
 @implementation BSNumPadPopoverConotroller
-
-@synthesize textField = _textField;
 
 #pragma mark - Public methods
 
