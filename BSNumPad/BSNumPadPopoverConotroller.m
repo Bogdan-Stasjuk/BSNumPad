@@ -79,8 +79,11 @@
 
 #pragma mark -UITextFieldDelegate
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    if (self.textField.window == nil) {
+        return;
+    }
+    
     if ([self.padDelegate respondsToSelector:@selector(popoverWillAppear)]) {
         [self.padDelegate popoverWillAppear];
     }
